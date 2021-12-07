@@ -21,9 +21,9 @@ namespace DummyPhotoshop
             return Color.FromArgb((int)(r / cnt), (int)(g / cnt), (int)(b / cnt));
         }
 
-        public static int CalcBrightness(this Color color)
+        public static double CalcBrightness(this Color color)
         {
-            return (int)(0.299 * color.R + 0.5876 * color.G + 0.114 * color.B);
+            return 0.299 * color.R + 0.5876 * color.G + 0.114 * color.B;
         }
     }
 }

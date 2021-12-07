@@ -2,27 +2,29 @@
 using System.Drawing;
 using System.Windows.Forms;
 using DummyPhotoshop.Data;
+using DummyPhotoshop.Filters;
+using DummyPhotoshop.src.Windows;
 
 namespace DummyPhotoshop.Windows
 {
     public partial class MainWindow : Form
     {
-        public Bitmap Bitmap { get; private set; }
-        private Bitmap OriginalBitmap { get;  set; }
+        public Photo Photo { get; private set; }
+        private Photo OriginalPhoto { get;  set; }
         private BrightnessHistogram _brightnessHistogram;
         public MainWindow()
         {
             InitializeComponent();
             canvas.SizeMode = PictureBoxSizeMode.StretchImage;
-            Bitmap = new Bitmap(canvas.Image);
-            OriginalBitmap = Bitmap;
+            Photo = new Photo((Bitmap)canvas.Image);
+            OriginalPhoto = Photo;
             _brightnessHistogram = new BrightnessHistogram();
         }
 
-        public void SetBitmap(Bitmap bitmap)
+        public void SetPhoto(Photo bitmap)
         {
-            Bitmap = bitmap;
-            canvas.Image = bitmap;
+            Photo = bitmap;
+            canvas.Image = bitmap.Bitmap;
         }
 
         private void LoadButtonClicked(object sender, EventArgs e)
@@ -31,34 +33,57 @@ namespace DummyPhotoshop.Windows
             diag.Filter = @"Files|*.jpg;*.jpeg;*.png";
             if (diag.ShowDialog() == DialogResult.OK)
             {
-                OriginalBitmap = new Bitmap(diag.FileName);
-                SetBitmap(OriginalBitmap);
+                OriginalPhoto = new Photo(new Bitmap(diag.FileName));
+                SetPhoto(OriginalPhoto);
             }
         }
 
-        private void brightnessContrastButton_Click(object sender, EventArgs e)
+        private void BrightnessContrastButtonClick(object sender, EventArgs e)
         {
-            var backup = Bitmap;
+            var backup = Photo;
             var window = new BrightnessContrastWindow(this);
             if (window.ShowDialog() != DialogResult.OK)
-                SetBitmap(backup);
+                SetPhoto(backup);
         }
 
-        private void RestoreButton_Click(object sender, EventArgs e)
+        private void RestoreButtonClick(object sender, EventArgs e)
         {
-            SetBitmap(OriginalBitmap);
+            SetPhoto(OriginalPhoto);
         }
 
-        
-
-        private void canvas_Paint(object sender, PaintEventArgs e)
+        private void CanvasPaint(object sender, PaintEventArgs e)
         {
            histogramBox.Refresh();
         }
 
-        private void histogramBox_Paint(object sender, PaintEventArgs e)
+        private void HistogramBoxPaint(object sender, PaintEventArgs e)
         {
-            _brightnessHistogram.Draw(new Photo(Bitmap), e.Graphics);
+            _brightnessHistogram.Draw(Photo, e.Graphics);
+        }
+
+        private void BinarizationButtonClick(object sender, EventArgs e)
+        {
+            var backup = Photo;
+            var window = new BinarizationWindow(this);
+            if (window.ShowDialog() != DialogResult.OK)
+                SetPhoto(backup);
+        }
+
+        private void BlackWhiteButtonClick(object sender, EventArgs e)
+        {
+            var bw = new BlackWhiteFilter();
+            SetPhoto(bw.ProcessImage(Photo));
+        }
+
+        private void NegativeButtonClick(object sender, EventArgs e)
+        {
+            var neg = new NegativeFilter();
+            SetPhoto(neg.ProcessImage(Photo));
+        }
+
+        private void CanvasMouseDown(object sender, MouseEventArgs e)
+        {
+            Console.WriteLine("click");
         }
     }
 }

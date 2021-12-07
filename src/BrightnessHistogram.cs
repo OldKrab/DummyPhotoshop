@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Linq;
 using DummyPhotoshop.Data;
 
@@ -14,21 +15,24 @@ namespace DummyPhotoshop
             var distribution = new int[256];
             for (int i = 0; i < photo.Height; i++)
                 for (int j = 0; j < photo.Width; j++)
-                    distribution[photo.GetPixel(j, i).CalcBrightness()]++;
-
-            MaxValue = (int)distribution.Where(x=>x>0).Average()*2;
+                    distribution[(int)(photo.GetPixel(j, i).CalcBrightness())]++;
+            var a = distribution.Distinct().ToArray();
+            var b = photo.Bits.Distinct().ToArray();
+            var c = b.Select(Color.FromArgb).ToArray();
+            MaxValue = (int)distribution.Average() * 6;
+           // MaxValue = (int)distribution.Max();
             float prevX = 0;
+            Brush br = new SolidBrush(Color.Black);
             for (int i = 0; i < 256; i++)
             {
                 float x = (float)(i + 1) / 256 * wigth;
                 float y = (float)distribution[i] / MaxValue * height;
-                using (Brush br = new SolidBrush(Color.Black))
-                {
-                    gr.FillRectangle(br, prevX, 0, x - prevX, y);
-                }
+                gr.FillRectangle(br, prevX, height - y, x - prevX, y);
 
                 prevX = x;
             }
+            br.Dispose();
+
         }
 
     }

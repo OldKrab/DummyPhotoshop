@@ -20,16 +20,16 @@ namespace Photoshop.Data
     //        set => Data[i, j] = value;
     //    }
 
-    //    public Bitmap ToBitmap()
+    //    public Photo ToBitmap()
     //    {
-    //        Bitmap bmp = new Bitmap(Width, Height);
+    //        Photo bmp = new Photo(Width, Height);
     //        for (int i = 0; i < Height; i++)
     //            for (int j = 0; j < Width; j++)
     //                bmp.SetPixel(j, i, Color.FromArgb(Data[i, j].R, Data[i, j].G, Data[i, j].B));
     //        return bmp;
     //    }
 
-    //    public static Photo FromBitmap(Bitmap bmp)
+    //    public static Photo FromBitmap(Photo bmp)
     //    {
     //        Photo photo = new Photo(bmp.Height, bmp.Width);
     //        for (int i = 0; i < photo.Height; i++)

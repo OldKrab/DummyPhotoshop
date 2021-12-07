@@ -16,7 +16,7 @@ namespace DummyPhotoshop.Windows
         public BrightnessContrastWindow(MainWindow mainWindow)
         {
             InitializeComponent();
-            _photo = new Photo(mainWindow.Bitmap);
+            _photo = mainWindow.Photo;
             _brightnessFilter = new BrightnessFilter();
             _contrastFilter = new ContrastFilter();
             contrastTrackbar.Minimum = 0;
@@ -26,7 +26,6 @@ namespace DummyPhotoshop.Windows
             brightnessTextBox.Text = brightnessTrackbar.Value.ToString();
             contrastTextBox.Text = GetCurrentContrast().ToString();
             _mainWindow = mainWindow;
-            mainWindow.SetBitmap(_photo.Bitmap);
         }
 
         private double GetCurrentContrast()
@@ -38,14 +37,14 @@ namespace DummyPhotoshop.Windows
             brightnessTextBox.Text = brightnessTrackbar.Value.ToString();
             _brightnessFilter.Coefficient = brightnessTrackbar.Value;
             var resPhoto = _brightnessFilter.ProcessImage(_photo);
-            _mainWindow.SetBitmap(resPhoto.Bitmap);
+            _mainWindow.SetPhoto(resPhoto);
         }
         private void contrastTrackbar_ValueChanged(object sender, EventArgs e)
         {
             contrastTextBox.Text = GetCurrentContrast().ToString();
             _contrastFilter.Coefficient = GetCurrentContrast();
             var resPhoto = _contrastFilter.ProcessImage(_photo);
-            _mainWindow.SetBitmap(resPhoto.Bitmap);
+            _mainWindow.SetPhoto(resPhoto);
         }
         private void okButton_Click(object sender, EventArgs e)
         {

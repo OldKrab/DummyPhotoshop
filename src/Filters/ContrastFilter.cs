@@ -16,17 +16,17 @@ namespace DummyPhotoshop.Filters
 
         protected override Color ProcessPixel(Color pixel)
         {
-            int c = _averageColor.CalcBrightness();
-            //return Color.FromArgb(
-            //    Math.Clamp((int) ((pixel.R - c) * Coefficient + c), 0, 255),
-            //    Math.Clamp((int) ((pixel.G - c) * Coefficient + c), 0, 255),
-            //    Math.Clamp((int) ((pixel.B - c) * Coefficient + c), 0, 255)
-            //    );
+            double c = _averageColor.CalcBrightness();
             return Color.FromArgb(
-                Math.Clamp((int) ((pixel.R - _averageColor.R) * Coefficient + _averageColor.R), 0, 255),
-                Math.Clamp((int) ((pixel.G - _averageColor.G) * Coefficient +_averageColor.G), 0, 255),
-                Math.Clamp((int) ((pixel.B - _averageColor.B) * Coefficient + _averageColor.B), 0, 255)
-            );
+                Math.Clamp((int) ((pixel.R - c) * Coefficient + c), 0, 255),
+                Math.Clamp((int) ((pixel.G - c) * Coefficient + c), 0, 255),
+                Math.Clamp((int) ((pixel.B - c) * Coefficient + c), 0, 255)
+                );
+            //return Color.FromArgb(
+            //    Math.Clamp((int) ((pixel.R - _averageColor.R) * Coefficient + _averageColor.R), 0, 255),
+            //    Math.Clamp((int) ((pixel.G - _averageColor.G) * Coefficient +_averageColor.G), 0, 255),
+            //    Math.Clamp((int) ((pixel.B - _averageColor.B) * Coefficient + _averageColor.B), 0, 255)
+            //);
         }
     }
 }
