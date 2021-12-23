@@ -30,7 +30,7 @@ namespace DummyPhotoshop.Filters
             _cashedRandDeltaPixel[(i, j, c)] = (dr, dg, db);
         }
 
-        protected override Color ProcessPixel(int x, int y, IPhoto photo)
+        protected override MyColor ProcessPixel(int x, int y, IPhoto photo)
         {
             var pixel = photo.GetPixel(x, y);
             int dr, dg, db;
@@ -40,7 +40,7 @@ namespace DummyPhotoshop.Filters
             db = (int)(db * Percent);
             if (Monochrome)
                 dg = db = dr;
-            return Color.FromArgb(
+            return new MyColor(
                 Math.Clamp(pixel.R + dr, 0, 255),
                 Math.Clamp(pixel.G + dg, 0, 255),
                 Math.Clamp(pixel.B + db, 0, 255)

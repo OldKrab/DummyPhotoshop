@@ -11,7 +11,7 @@ namespace DummyPhotoshop.Filters
         {
             for(int i = 0; i <=2*Radius; i++)
             for (int j = 0; j <= 2 * Radius; j++)
-                _mask[i,j] = 1.0 / (2 * Radius + 1) / (2 * Radius + 1);
+                Mask[i,j] = 1.0 / (2 * Radius + 1) / (2 * Radius + 1);
         }
     }
 }

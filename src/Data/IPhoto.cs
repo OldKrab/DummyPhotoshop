@@ -9,9 +9,9 @@ namespace DummyPhotoshop.Data
          int Width { get; }
          int Height { get; }
 
-         void SetPixel(int x, int y, Color colour);
-         Color GetPixel(int x, int y);
-         Color GetAverageColor();
+         void SetPixel(int x, int y, MyColor colour);
+         MyColor GetPixel(int x, int y);
+         MyColor GetAverageColor();
         
     }
 }

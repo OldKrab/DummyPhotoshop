@@ -20,18 +20,18 @@ namespace DummyPhotoshop.Data
             Crop = crop;
         }
 
-        public void SetPixel(int x, int y, Color colour)
+        public void SetPixel(int x, int y, MyColor colour)
         {
             
             CropedPhoto.SetPixel(Crop.X + x, Crop.Y + y, colour);
         }
 
-        public Color GetPixel(int x, int y)
+        public MyColor GetPixel(int x, int y)
         {
             return CropedPhoto.GetPixel(Crop.X + x, Crop.Y + y);
         }
 
-        public Color GetAverageColor()
+        public MyColor GetAverageColor()
         {
             return CropedPhoto.GetAverageColor();
         }

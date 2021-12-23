@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using DummyPhotoshop.Data;
 using DummyPhotoshop.Filters;
@@ -49,7 +50,7 @@ namespace DummyPhotoshop.Windows
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
-                _binarizationFilter.RightColor = colorDialog1.Color;
+                _binarizationFilter.RightColor = new MyColor(colorDialog1.Color);
                 var resPhoto = _binarizationFilter.ProcessImage(_photo);
                 _mainWindow.SetPhoto(resPhoto);
             }
@@ -60,7 +61,7 @@ namespace DummyPhotoshop.Windows
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
-                _binarizationFilter.LeftColor = colorDialog1.Color;
+                _binarizationFilter.LeftColor = new MyColor(colorDialog1.Color);
                 var resPhoto = _binarizationFilter.ProcessImage(_photo);
                 _mainWindow.SetPhoto(resPhoto);
             }

@@ -1,17 +1,16 @@
-﻿using System.Drawing;
-using DummyPhotoshop.Data;
+﻿using DummyPhotoshop.Data;
 
 namespace DummyPhotoshop.Filters
 {
     public class BinarizationFilter : PixelFilter
     {
         public int Threshold { get; set; }
-        public Color LeftColor { get; set; } = Color.Black;
-        public Color RightColor { get; set; } = Color.White;
+        public MyColor LeftColor { get; set; } = new MyColor(0,0,0);
+        public MyColor RightColor { get; set; } =  new MyColor(255,255,255);
 
-        protected override Color ProcessPixel(int x, int y, IPhoto photo)
+        protected override MyColor ProcessPixel(int x, int y, IPhoto photo)
         {
-            Color pixel = photo.GetPixel(x, y);
+            MyColor pixel = photo.GetPixel(x, y);
             return pixel.CalcBrightness() > Threshold ? RightColor : LeftColor;
         }
     }

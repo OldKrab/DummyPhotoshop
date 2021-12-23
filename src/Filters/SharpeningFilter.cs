@@ -8,8 +8,8 @@
             int cnt = (2 * Radius + 1) * (2 * Radius + 1);
             for (int i = 0; i <= 2 * Radius; i++)
                 for (int j = 0; j <= 2 * Radius; j++)
-                    _mask[i, j] = -Coefficient / (cnt - 1);
-            _mask[Radius, Radius] = Coefficient + 1;
+                    Mask[i, j] = -Coefficient / (cnt - 1);
+            Mask[Radius, Radius] = Coefficient + 1;
         }
     }
 }

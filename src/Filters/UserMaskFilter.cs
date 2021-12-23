@@ -6,7 +6,7 @@
 
         protected override void InitMask()
         {
-            _mask = Mask;
+            base.Mask = Mask;
             Radius = Mask.GetLength(0) / 2;
         }
     }

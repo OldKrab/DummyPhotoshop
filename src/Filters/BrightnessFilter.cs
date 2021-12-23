@@ -9,10 +9,10 @@ namespace DummyPhotoshop.Filters
     {
         public int Coefficient { get; set; }
 
-        protected override Color ProcessPixel(int x, int y, IPhoto photo)
+        protected override MyColor ProcessPixel(int x, int y, IPhoto photo)
         {
-            Color pixel = photo.GetPixel(x, y);
-            return Color.FromArgb(
+            MyColor pixel = photo.GetPixel(x, y);
+            return new MyColor(
                 Math.Clamp(pixel.R + Coefficient, 0, 255),
                 Math.Clamp(pixel.G + Coefficient, 0, 255),
                 Math.Clamp(pixel.B + Coefficient, 0, 255));

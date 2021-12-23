@@ -16,27 +16,27 @@ namespace DummyPhotoshop.Filters
                 {
                     var value = CalcH(i, j);
                     var c = Radius;
-                    _mask[c + i, c + j] = value;
-                    _mask[c + i, c - j] = value;
-                    _mask[c - i, c + j] = value;
-                    _mask[c - i, c - j] = value;
-                    _mask[c + j, c + i] = value;
-                    _mask[c + j, c - i] = value;
-                    _mask[c - j, c + i] = value;
-                    _mask[c - j, c - i] = value;
+                    Mask[c + i, c + j] = value;
+                    Mask[c + i, c - j] = value;
+                    Mask[c - i, c + j] = value;
+                    Mask[c - i, c - j] = value;
+                    Mask[c + j, c + i] = value;
+                    Mask[c + j, c - i] = value;
+                    Mask[c - j, c + i] = value;
+                    Mask[c - j, c - i] = value;
                 }
 
             double hSum = 0;
             for (int i = 0; i <= 2 * Radius; i++)
                 for (int j = 0; j <= 2 * Radius; j++)
-                    hSum += _mask[i, j];
+                    hSum += Mask[i, j];
 
             double a = 1.0 / hSum;
             for (int i = 0; i < 2 * Radius + 1; i++)
             {
                 for (int j = 0; j < 2 * Radius + 1; j++)
                 {
-                    _mask[i, j] *= a;
+                    Mask[i, j] *= a;
                 }
             }
         }

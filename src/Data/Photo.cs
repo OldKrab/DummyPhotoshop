@@ -16,7 +16,7 @@ namespace DummyPhotoshop.Data
         protected GCHandle BitsHandle { get; private set; }
 
         private bool _isModifiedAverageColor = true;
-        private Color _averageColor;
+        private MyColor _averageColor;
 
         public Photo(int width, int height)
         {
@@ -49,25 +49,25 @@ namespace DummyPhotoshop.Data
 
 
 
-        public virtual void SetPixel(int x, int y, Color colour)
+        public virtual void SetPixel(int x, int y, MyColor colour)
         {
             _isModifiedAverageColor = true;
             int index = x + (y * Width);
-            int col = colour.ToArgb();
+            int col = colour.Value;
             
             Bits[index] = col;
         }
 
-        public virtual Color GetPixel(int x, int y)
+        public virtual MyColor GetPixel(int x, int y)
         {
             int index = x + (y * Width);
             int col = Bits[index];
-            Color result = Color.FromArgb(col);
+            MyColor result = new MyColor(col);
 
             return result;
         }
 
-        public Color GetAverageColor()
+        public MyColor GetAverageColor()
         {
             if (!_isModifiedAverageColor)
             {
@@ -86,7 +86,7 @@ namespace DummyPhotoshop.Data
                 }
 
             long cnt = Height * Width;
-            return _averageColor = Color.FromArgb((int)(r / cnt), (int)(g / cnt), (int)(b / cnt));
+            return _averageColor = new MyColor((int)(r / cnt), (int)(g / cnt), (int)(b / cnt));
         }
 
         public void Dispose()

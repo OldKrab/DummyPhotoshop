@@ -33,7 +33,7 @@ namespace DummyPhotoshop.Filters
         {
         }
 
-        protected abstract Color ProcessPixel(int x, int y, IPhoto photo);
+        protected abstract MyColor ProcessPixel(int x, int y, IPhoto photo);
 
 
     }

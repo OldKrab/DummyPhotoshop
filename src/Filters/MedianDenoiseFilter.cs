@@ -13,11 +13,11 @@ namespace DummyPhotoshop.Filters
             
         }
 
-        protected override Color ProcessPixel(int x, int y, IPhoto photo)
+        protected override MyColor ProcessPixel(int x, int y, IPhoto photo)
         {
-            Color pixel = photo.GetPixel(x, y);
+            MyColor pixel = photo.GetPixel(x, y);
             int cnt = (2 * Radius + 1) * (2 * Radius + 1);
-            List<(Color, double)> pixels = new List<(Color, double)>(cnt);
+            List<(MyColor, double)> pixels = new List<(MyColor, double)>(cnt);
             for (int i = -Radius; i <= Radius; i++)
                 for (int j = -Radius; j <= Radius; j++)
                 {
