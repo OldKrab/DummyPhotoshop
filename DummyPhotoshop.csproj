@@ -14,6 +14,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="src\Windows\SharpeningWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\Windows\MaskFilterWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\Windows\GaussianDenoiseWindow.cs" />
+    <Compile Update="src\Windows\AddNoiseWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -24,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="src\Helpers\" />
+    <Folder Include="Reports\" />
   </ItemGroup>
 
 </Project>

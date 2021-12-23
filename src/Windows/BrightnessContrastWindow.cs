@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Forms;
 using DummyPhotoshop.Data;
 using DummyPhotoshop.Filters;
@@ -7,12 +8,15 @@ namespace DummyPhotoshop.Windows
 {
     public partial class BrightnessContrastWindow : Form
     {
-        private Photo _photo;
+        private IPhoto _photo;
         private BrightnessFilter _brightnessFilter;
         private ContrastFilter _contrastFilter;
         private MainWindow _mainWindow;
         private double _contrastMultiplier = 0.01;
         private double _maxContrast = 5;
+
+        private bool _isModifiedBrightness = true;
+        private IPhoto _brightnessPhoto;
         public BrightnessContrastWindow(MainWindow mainWindow)
         {
             InitializeComponent();
@@ -24,7 +28,7 @@ namespace DummyPhotoshop.Windows
             contrastTrackbar.Value = (int)(1 / _contrastMultiplier);
 
             brightnessTextBox.Text = brightnessTrackbar.Value.ToString();
-            contrastTextBox.Text = GetCurrentContrast().ToString();
+            contrastTextBox.Text = GetCurrentContrast().ToString(CultureInfo.InvariantCulture);
             _mainWindow = mainWindow;
         }
 
@@ -32,19 +36,27 @@ namespace DummyPhotoshop.Windows
         {
             return contrastTrackbar.Value * _contrastMultiplier;
         }
+
+        private void UpdatePhoto()
+        {
+            if (_isModifiedBrightness)
+                _brightnessPhoto = _brightnessFilter.ProcessImage(_photo);
+            _isModifiedBrightness = false;
+            var resPhoto = _contrastFilter.ProcessImage(_brightnessPhoto);
+            _mainWindow.SetPhoto(resPhoto);
+        }
         private void brightnessTrackbar_ValueChanged(object sender, EventArgs e)
         {
             brightnessTextBox.Text = brightnessTrackbar.Value.ToString();
             _brightnessFilter.Coefficient = brightnessTrackbar.Value;
-            var resPhoto = _brightnessFilter.ProcessImage(_photo);
-            _mainWindow.SetPhoto(resPhoto);
+            _isModifiedBrightness = true;
+            UpdatePhoto();
         }
         private void contrastTrackbar_ValueChanged(object sender, EventArgs e)
         {
-            contrastTextBox.Text = GetCurrentContrast().ToString();
+            contrastTextBox.Text = GetCurrentContrast().ToString(CultureInfo.InvariantCulture);
             _contrastFilter.Coefficient = GetCurrentContrast();
-            var resPhoto = _contrastFilter.ProcessImage(_photo);
-            _mainWindow.SetPhoto(resPhoto);
+            UpdatePhoto();
         }
         private void okButton_Click(object sender, EventArgs e)
         {

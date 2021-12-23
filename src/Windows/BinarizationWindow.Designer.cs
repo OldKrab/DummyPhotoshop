@@ -1,5 +1,5 @@
 ﻿
-namespace DummyPhotoshop.src.Windows
+namespace DummyPhotoshop.Windows
 {
     partial class BinarizationWindow
     {
@@ -30,10 +30,15 @@ namespace DummyPhotoshop.src.Windows
         private void InitializeComponent()
         {
             this.histogramBox = new System.Windows.Forms.PictureBox();
-            this.CancelButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.okButton = new System.Windows.Forms.Button();
             this.binarizationTrackbar = new System.Windows.Forms.TrackBar();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.rightColorButton = new System.Windows.Forms.Button();
+            this.leftColorButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.histogramBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.binarizationTrackbar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -50,18 +55,18 @@ namespace DummyPhotoshop.src.Windows
             this.histogramBox.TabStop = false;
             this.histogramBox.Paint += new System.Windows.Forms.PaintEventHandler(this.histogramBox_Paint);
             // 
-            // CancelButton
+            // cancelButton
             // 
-            this.CancelButton.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CancelButton.Location = new System.Drawing.Point(523, 53);
-            this.CancelButton.Margin = new System.Windows.Forms.Padding(6);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CancelButton.Size = new System.Drawing.Size(106, 29);
-            this.CancelButton.TabIndex = 5;
-            this.CancelButton.Text = "Отмена";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.cancelButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cancelButton.Location = new System.Drawing.Point(523, 53);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(6);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cancelButton.Size = new System.Drawing.Size(106, 29);
+            this.cancelButton.TabIndex = 5;
+            this.cancelButton.Text = "Отмена";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // okButton
             // 
@@ -87,7 +92,7 @@ namespace DummyPhotoshop.src.Windows
             this.binarizationTrackbar.TabIndex = 6;
             this.binarizationTrackbar.TickStyle = System.Windows.Forms.TickStyle.None;
             this.binarizationTrackbar.Value = 100;
-            this.binarizationTrackbar.ValueChanged += new System.EventHandler(this.binarizationTrackbar_ValueChanged);
+            this.binarizationTrackbar.Scroll += new System.EventHandler(this.binarizationTrackbar_ValueChanged);
             // 
             // panel1
             // 
@@ -98,29 +103,84 @@ namespace DummyPhotoshop.src.Windows
             this.panel1.Size = new System.Drawing.Size(502, 201);
             this.panel1.TabIndex = 7;
             // 
+            // rightColorButton
+            // 
+            this.rightColorButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.rightColorButton.Location = new System.Drawing.Point(471, 222);
+            this.rightColorButton.Margin = new System.Windows.Forms.Padding(6);
+            this.rightColorButton.Name = "rightColorButton";
+            this.rightColorButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rightColorButton.Size = new System.Drawing.Size(32, 32);
+            this.rightColorButton.TabIndex = 8;
+            this.rightColorButton.UseVisualStyleBackColor = true;
+            this.rightColorButton.Click += new System.EventHandler(this.rightColorButton_Click);
+            this.rightColorButton.Paint += new System.Windows.Forms.PaintEventHandler(this.rightColorButton_Paint);
+            // 
+            // leftColorButton
+            // 
+            this.leftColorButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.leftColorButton.Location = new System.Drawing.Point(105, 222);
+            this.leftColorButton.Margin = new System.Windows.Forms.Padding(6);
+            this.leftColorButton.Name = "leftColorButton";
+            this.leftColorButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.leftColorButton.Size = new System.Drawing.Size(32, 32);
+            this.leftColorButton.TabIndex = 9;
+            this.leftColorButton.UseVisualStyleBackColor = true;
+            this.leftColorButton.Click += new System.EventHandler(this.leftColorButton_Click);
+            this.leftColorButton.Paint += new System.Windows.Forms.PaintEventHandler(this.leftColorButton_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 228);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 20);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Левый цвет";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(372, 228);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Правый цвет";
+            // 
             // BinarizationWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 216);
+            this.ClientSize = new System.Drawing.Size(644, 263);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.leftColorButton);
+            this.Controls.Add(this.rightColorButton);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
             this.Name = "BinarizationWindow";
             this.Text = "Бинаризация";
+            this.Load += new System.EventHandler(this.BinarizationWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.histogramBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.binarizationTrackbar)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox histogramBox;
-        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.TrackBar binarizationTrackbar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Button rightColorButton;
+        private System.Windows.Forms.Button leftColorButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

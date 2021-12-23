@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Linq;
 using DummyPhotoshop.Data;
 
@@ -8,7 +7,7 @@ namespace DummyPhotoshop
     public class BrightnessHistogram
     {
         public int MaxValue { get; set; }
-        public void Draw(Photo photo, Graphics gr)
+        public void Draw(IPhoto photo, Graphics gr)
         {
             float wigth = gr.VisibleClipBounds.Width;
             float height = gr.VisibleClipBounds.Height;
@@ -16,9 +15,6 @@ namespace DummyPhotoshop
             for (int i = 0; i < photo.Height; i++)
                 for (int j = 0; j < photo.Width; j++)
                     distribution[(int)(photo.GetPixel(j, i).CalcBrightness())]++;
-            var a = distribution.Distinct().ToArray();
-            var b = photo.Bits.Distinct().ToArray();
-            var c = b.Select(Color.FromArgb).ToArray();
             MaxValue = (int)distribution.Average() * 6;
            // MaxValue = (int)distribution.Max();
             float prevX = 0;

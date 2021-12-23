@@ -1,29 +1,23 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using DummyPhotoshop.Data;
 
 namespace DummyPhotoshop
 {
     public static class Extentions
     {
-        public static Color GetAverageColor(this Photo photo)
+        public static Color ClampGetPixel(this IPhoto photo, int x, int y)
         {
-            long r = 0, g = 0, b = 0;
-            for (int i = 0; i < photo.Height; i++)
-                for (int j = 0; j < photo.Width; j++)
-                {
-                    var pixel = photo.GetPixel(j, i);
-                    r += pixel.R;
-                    g += pixel.G;
-                    b += pixel.B;
-                }
-
-            long cnt = photo.Height * photo.Width;
-            return Color.FromArgb((int)(r / cnt), (int)(g / cnt), (int)(b / cnt));
+            x = Math.Clamp(x, 0, photo.Width - 1);
+            y = Math.Clamp(y, 0, photo.Height - 1);
+            return photo.GetPixel(x, y);
         }
 
         public static double CalcBrightness(this Color color)
         {
             return 0.299 * color.R + 0.5876 * color.G + 0.114 * color.B;
         }
+
+
     }
 }

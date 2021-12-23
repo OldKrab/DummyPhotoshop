@@ -1,21 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DummyPhotoshop.Data;
 using DummyPhotoshop.Filters;
-using DummyPhotoshop.Windows;
 
-namespace DummyPhotoshop.src.Windows
+namespace DummyPhotoshop.Windows
 {
     public partial class BinarizationWindow : Form
     {
-        private Photo _photo;
+        private IPhoto _photo;
         private BinarizationFilter _binarizationFilter;
         private MainWindow _mainWindow;
         private BrightnessHistogram _brightnessHistogram;
@@ -37,6 +29,7 @@ namespace DummyPhotoshop.src.Windows
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
             Close();
         }
        
@@ -50,6 +43,44 @@ namespace DummyPhotoshop.src.Windows
         private void histogramBox_Paint(object sender, PaintEventArgs e)
         {
             _brightnessHistogram.Draw(_photo, e.Graphics);
+        }
+
+        private void rightColorButton_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                _binarizationFilter.RightColor = colorDialog1.Color;
+                var resPhoto = _binarizationFilter.ProcessImage(_photo);
+                _mainWindow.SetPhoto(resPhoto);
+            }
+            Refresh();
+        }
+
+        private void leftColorButton_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                _binarizationFilter.LeftColor = colorDialog1.Color;
+                var resPhoto = _binarizationFilter.ProcessImage(_photo);
+                _mainWindow.SetPhoto(resPhoto);
+            }
+            Refresh();
+
+        }
+
+        private void rightColorButton_Paint(object sender, PaintEventArgs e)
+        {
+            rightColorButton.BackColor = _binarizationFilter.RightColor;
+        }
+
+        private void leftColorButton_Paint(object sender, PaintEventArgs e)
+        {
+            leftColorButton.BackColor = _binarizationFilter.LeftColor;
+        }
+
+        private void BinarizationWindow_Load(object sender, EventArgs e)
+        {
+            binarizationTrackbar_ValueChanged(sender, e);
         }
     }
 }

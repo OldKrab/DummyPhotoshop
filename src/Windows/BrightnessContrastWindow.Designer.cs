@@ -39,7 +39,7 @@ namespace DummyPhotoshop.Windows
             this.brightnessTrackbar = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
             this.okButton = new System.Windows.Forms.Button();
-            this.CancelButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contrastTrackbar)).BeginInit();
@@ -155,24 +155,24 @@ namespace DummyPhotoshop.Windows
             this.okButton.UseVisualStyleBackColor = true;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
-            // CancelButton
+            // cancelButton
             // 
-            this.CancelButton.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CancelButton.Location = new System.Drawing.Point(452, 66);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CancelButton.Size = new System.Drawing.Size(106, 29);
-            this.CancelButton.TabIndex = 2;
-            this.CancelButton.Text = "Отмена";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.cancelButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cancelButton.Location = new System.Drawing.Point(452, 66);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cancelButton.Size = new System.Drawing.Size(106, 29);
+            this.cancelButton.TabIndex = 2;
+            this.cancelButton.Text = "Отмена";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // BrightnessContrastWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 190);
-            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "BrightnessContrastWindow";
@@ -196,7 +196,7 @@ namespace DummyPhotoshop.Windows
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox brightnessTextBox;
         private System.Windows.Forms.Button okButton;
-        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox contrastTextBox;
         private System.Windows.Forms.TrackBar contrastTrackbar;
