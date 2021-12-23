@@ -14,9 +14,10 @@ namespace DummyPhotoshop.Filters
     {
         public IPhoto ProcessImage(IPhoto photo)
         {
+
             PreProcess(photo);
             var resPhoto = (IPhoto)photo.Clone();
-            int maxThreads = 12;
+            int maxThreads = 42;
             Parallel.For(0, maxThreads, thread =>
             {
                 int from = thread * photo.Height / maxThreads;

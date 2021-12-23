@@ -19,7 +19,7 @@ namespace DummyPhotoshop.Windows
         {
             InitializeComponent();
 
-            // canvas.SizeMode = PictureBoxSizeMode.StretchImage;
+             canvas.SizeMode = PictureBoxSizeMode.StretchImage;
 
             SetPhoto(new Photo(canvas.Width, canvas.Height));
             UndoStack = new Stack<IPhoto>();
@@ -31,7 +31,8 @@ namespace DummyPhotoshop.Windows
         public void SetPhoto(IPhoto bitmap)
         {
             _originalBitmap = bitmap.Bitmap;
-            Photo = ResizePhoto(_originalBitmap, canvas.Size);
+            Photo = bitmap;
+            canvas.Image = bitmap.Bitmap;
             canvas.Refresh();
             histogramBox.Refresh();
         }
@@ -182,7 +183,6 @@ namespace DummyPhotoshop.Windows
         }
         private void CanvasPaint(object sender, PaintEventArgs e)
         {
-            e.Graphics.DrawImage(Photo.Bitmap, Point.Empty);
             if (_isCropped)
                 e.Graphics.DrawRectangle(new Pen(Color.Black), _crop);
         }
