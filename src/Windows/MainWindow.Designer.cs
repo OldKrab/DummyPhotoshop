@@ -34,6 +34,7 @@ namespace DummyPhotoshop.Windows
         {
             this.histogramBox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.canvas = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.loadButton = new System.Windows.Forms.ToolStripMenuItem();
             this.restoreButton = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,12 +52,11 @@ namespace DummyPhotoshop.Windows
             this.sharpeningButton = new System.Windows.Forms.ToolStripMenuItem();
             this.embossingButton = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.canvas = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.histogramBox)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.canvas)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.canvas)).BeginInit();
             this.SuspendLayout();
             // 
             // histogramBox
@@ -81,6 +81,19 @@ namespace DummyPhotoshop.Windows
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1316, 753);
             this.panel1.TabIndex = 4;
+            // 
+            // canvas
+            // 
+            this.canvas.BackColor = System.Drawing.Color.White;
+            this.canvas.Location = new System.Drawing.Point(41, 60);
+            this.canvas.Name = "canvas";
+            this.canvas.Size = new System.Drawing.Size(786, 574);
+            this.canvas.TabIndex = 10;
+            this.canvas.TabStop = false;
+            this.canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.CanvasPaint);
+            this.canvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CanvasMouseDown);
+            this.canvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CanvasMouseMove);
+            this.canvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CanvasMouseUp);
             // 
             // menuStrip1
             // 
@@ -224,17 +237,6 @@ namespace DummyPhotoshop.Windows
             this.panel2.Size = new System.Drawing.Size(431, 200);
             this.panel2.TabIndex = 2;
             // 
-            // canvas
-            // 
-            this.canvas.Location = new System.Drawing.Point(41, 60);
-            this.canvas.Name = "canvas";
-            this.canvas.Size = new System.Drawing.Size(786, 574);
-            this.canvas.TabIndex = 10;
-            this.canvas.TabStop = false;
-            this.canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.CanvasPaint);
-            this.canvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CanvasMouseDown);
-            this.canvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.CanvasMouseUp);
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -251,10 +253,10 @@ namespace DummyPhotoshop.Windows
             ((System.ComponentModel.ISupportInitialize)(this.histogramBox)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.canvas)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.canvas)).EndInit();
             this.ResumeLayout(false);
 
         }
