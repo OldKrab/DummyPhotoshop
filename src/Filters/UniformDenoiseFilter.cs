@@ -1,8 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Threading.Tasks;
-using DummyPhotoshop.Data;
-
+﻿
 namespace DummyPhotoshop.Filters
 {
     public class UniformDenoiseFilter : MaskFilter

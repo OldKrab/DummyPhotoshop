@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Drawing;
 using DummyPhotoshop.Data;
-using Photoshop.Filters;
 
 namespace DummyPhotoshop.Filters
 {

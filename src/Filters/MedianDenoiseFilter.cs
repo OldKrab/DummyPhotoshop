@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using DummyPhotoshop.Data;
 
 namespace DummyPhotoshop.Filters
