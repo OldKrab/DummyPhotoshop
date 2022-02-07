@@ -47,7 +47,7 @@ namespace DummyPhotoshop.Windows
         public void Undo()
         {
             if (UndoStack.Count <= 0) return;
-            
+
             RedoStack.Push(Photo);
             SetPhoto(UndoStack.Peek());
             UndoStack.Pop();
@@ -118,7 +118,7 @@ namespace DummyPhotoshop.Windows
         {
             if (Photo is PhotoCrop photoCrop)
                 Photo = photoCrop.CropedPhoto;
-            _cropManager.StartCrop((Photo) Photo, CanvasPointToPhoto(e.Location, Photo.Height, Photo.Width));
+            _cropManager.StartCrop((Photo)Photo, CanvasPointToPhoto(e.Location, Photo.Height, Photo.Width));
         }
 
         private void CanvasMouseMove(object sender, MouseEventArgs e)
@@ -151,9 +151,10 @@ namespace DummyPhotoshop.Windows
 
         private void RestoreButtonClick(object sender, EventArgs e)
         {
-            while (UndoStack.Count >= 1)
+            while (UndoStack.Count > 1)
                 UndoStack.Pop();
-            SetPhoto(UndoStack.Peek());
+            if (UndoStack.Count != 0)
+                SetPhoto(UndoStack.Peek());
         }
 
         private void HistogramBoxPaint(object sender, PaintEventArgs e) => _brightnessHistogram.Draw(Photo, e.Graphics);
