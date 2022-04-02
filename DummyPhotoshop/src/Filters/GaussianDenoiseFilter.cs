@@ -2,6 +2,9 @@
 
 namespace DummyPhotoshop.Filters
 {
+    /// <summary>
+    /// Фильтр шумоподавления, использующий метод Гаусса.
+    /// </summary>
     public class GaussianDenoiseFilter : MaskFilter
     {
         public double Variance { get; set; } = 1;

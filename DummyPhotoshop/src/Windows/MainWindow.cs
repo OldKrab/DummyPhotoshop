@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Windows.Forms;
-using DummyPhotoshop.Data;
+﻿using DummyPhotoshop.Data;
 using DummyPhotoshop.Filters;
 using DummyPhotoshop.Helpers;
 
@@ -25,7 +21,7 @@ namespace DummyPhotoshop.Windows
             SetPhoto(new Photo(canvas.Width, canvas.Height));
             UndoStack = new Stack<IPhoto>();
             RedoStack = new Stack<IPhoto>();
-            UndoStack.Push(Photo);
+            UndoStack.Push(Photo!);
             _brightnessHistogram = new BrightnessHistogram();
             _cropManager = new CropManager();
         }
@@ -132,6 +128,7 @@ namespace DummyPhotoshop.Windows
 
         private void CanvasMouseUp(object sender, MouseEventArgs e)
         {
+            if(!_cropManager.IsCropping) return;
             if (_cropManager.IsNothingSelected && Photo is PhotoCrop photoCrop)
             {
                 //Is Click

@@ -4,8 +4,9 @@ using DummyPhotoshop.Data;
 namespace DummyPhotoshop.Filters
 {
     /// <summary>
-    /// Базовый класс для фильтра, который обрабатывает каждый пиксель 
+    /// Базовый класс для фильтра, который обрабатывает каждый пиксель.
     /// </summary>
+
     public abstract class PixelFilter : IFilter
     {
         public IPhoto ProcessImage(IPhoto photo)
@@ -29,6 +30,13 @@ namespace DummyPhotoshop.Filters
         {
         }
 
+        /// <summary>
+        /// Функция для обработки одного пикселя.
+        /// </summary>
+        /// <param name="x">X-координата пикселя</param>
+        /// <param name="y">Y-координата пикселя</param>
+        /// <param name="photo">Исходное изображение</param>
+        /// <returns>Вычисленный пиксель</returns>
         protected abstract MyColor ProcessPixel(int x, int y, IPhoto photo);
 
     }

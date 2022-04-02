@@ -44,7 +44,7 @@ namespace DummyPhotoshop.Windows
 
         private void MonocromeCheckBoxCheckedChanged(object sender, EventArgs e)
         {
-            _noiseFilter.Monochrome = monocromeCheckBox.Checked;
+            _noiseFilter.IsMonochrome = monocromeCheckBox.Checked;
             var resPhoto = _noiseFilter.ProcessImage(_photo);
             _mainWindow.SetPhoto(resPhoto);
         }

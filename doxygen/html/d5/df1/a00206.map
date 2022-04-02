@@ -1,0 +1,4 @@
+<map id="DummyPhotoshop.Filters.PixelFilter" name="DummyPhotoshop.Filters.PixelFilter">
+<area shape="rect" id="node1" title="Базовый класс для фильтра, который обрабатывает каждый пиксель" alt="" coords="5,131,208,252"/>
+<area shape="rect" id="node2" href="$da/d15/a00188.html" title="Интерфейс фильтра для изображений" alt="" coords="44,5,169,83"/>
+</map>

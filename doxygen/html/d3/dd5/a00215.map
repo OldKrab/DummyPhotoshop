@@ -1,0 +1,6 @@
+<map id="DummyPhotoshop.Filters.UniformDenoiseFilter" name="DummyPhotoshop.Filters.UniformDenoiseFilter">
+<area shape="rect" id="node1" title="Фильтр шумоподавления, использующий равномерный метод." alt="" coords="5,455,223,547"/>
+<area shape="rect" id="node2" href="$dd/da2/a00192.html" title="Базовый класс для фильтра, который применяет определенную маску к каждому пикселю." alt="" coords="55,285,173,407"/>
+<area shape="rect" id="node3" href="$dc/d31/a00208.html" title="Базовый класс для фильтра, который обрабатывает каждый пиксель." alt="" coords="51,131,177,237"/>
+<area shape="rect" id="node4" href="$da/d15/a00188.html" title="Интерфейс фильтра для изображений." alt="" coords="51,5,177,83"/>
+</map>

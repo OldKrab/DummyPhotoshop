@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Исходный файл D:/source/c#/DummyPhotoshop/DummyPhotoshop/src/Filters/MaskFilter.cs</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="../../dir_99033e81eccb7d6056f03e7c77aaf157.html">source</a></li><li class="navelem"><a class="el" href="../../dir_c8bc3e7ca3619f9692df6737a26c26da.html">c#</a></li><li class="navelem"><a class="el" href="../../dir_bca1017898745852755a16f111232f24.html">DummyPhotoshop</a></li><li class="navelem"><a class="el" href="../../dir_a97a09e2d8f731999d6da99eacd4ba84.html">DummyPhotoshop</a></li><li class="navelem"><a class="el" href="../../dir_257d4137bb9057acf1bc61d203db621a.html">src</a></li><li class="navelem"><a class="el" href="../../dir_f0e27185298f7371a3a4d330e867224b.html">Filters</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">MaskFilter.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/df9/a00044.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using</span> System;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using</span> <a class="code hl_namespace" href="../../d4/d3e/a00116.html">DummyPhotoshop</a>.<a class="code hl_namespace" href="../../d9/d4b/a00117.html">Data</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d8/d87/a00118.html">DummyPhotoshop.Filters</a></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../dd/da2/a00192.html">    9</a></span>    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class </span><a class="code hl_class" href="../../dd/da2/a00192.html">MaskFilter</a> : <a class="code hl_class" href="../../dc/d31/a00208.html">PixelFilter</a> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../dd/da2/a00192.html#ac1bad8cc6988e4757dd4ea46e4da419a">   14</a></span>        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="../../dd/da2/a00192.html#ac1bad8cc6988e4757dd4ea46e4da419a">Radius</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } = 1;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="../../dd/da2/a00192.html#a89ee2d87c20fb8af88a0b14c04a7fb97">   22</a></span>        <span class="keyword">protected</span> <span class="keywordtype">double</span>[,] <a class="code hl_variable" href="../../dd/da2/a00192.html#a89ee2d87c20fb8af88a0b14c04a7fb97">Mask</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../dd/da2/a00192.html#a3a7274e36da0a872755044528778492e">   31</a></span>        <span class="keyword">protected</span> <span class="keyword">abstract</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/da2/a00192.html#a3a7274e36da0a872755044528778492e">InitMask</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="../../dd/da2/a00192.html#a21b9b302e5ccd5fdbdfd4a786db0d805">   33</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/da2/a00192.html#a21b9b302e5ccd5fdbdfd4a786db0d805">PreProcess</a>(<a class="code hl_interface" href="../../d5/db1/a00140.html">IPhoto</a> photo)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <a class="code hl_variable" href="../../dd/da2/a00192.html#a89ee2d87c20fb8af88a0b14c04a7fb97">Mask</a> = <span class="keyword">new</span> <span class="keywordtype">double</span>[2 * <a class="code hl_property" href="../../dd/da2/a00192.html#ac1bad8cc6988e4757dd4ea46e4da419a">Radius</a> + 1, 2 * <a class="code hl_property" href="../../dd/da2/a00192.html#ac1bad8cc6988e4757dd4ea46e4da419a">Radius</a> + 1];</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_function" href="../../dd/da2/a00192.html#a3a7274e36da0a872755044528778492e">InitMask</a>();</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../dd/da2/a00192.html#ad2ac245c989f713f43f8d799d8131752">   39</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <a class="code hl_struct" href="../../d5/da7/a00144.html">MyColor</a> <a class="code hl_function" href="../../dd/da2/a00192.html#ad2ac245c989f713f43f8d799d8131752">ProcessPixel</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <a class="code hl_interface" href="../../d5/db1/a00140.html">IPhoto</a> photo)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordtype">double</span> r = 0, g = 0, b = 0;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2*<a class="code hl_property" href="../../dd/da2/a00192.html#ac1bad8cc6988e4757dd4ea46e4da419a">Radius</a>+1; i++)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 2*<a class="code hl_property" href="../../dd/da2/a00192.html#ac1bad8cc6988e4757dd4ea46e4da419a">Radius</a>+1; j++)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    var c = <a class="code hl_property" href="../../dd/da2/a00192.html#ac1bad8cc6988e4757dd4ea46e4da419a">Radius</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                    var currPixel = photo.ClampGetPixel(x + j - c, y + i - c);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                    <span class="keywordtype">double</span> coef = <a class="code hl_variable" href="../../dd/da2/a00192.html#a89ee2d87c20fb8af88a0b14c04a7fb97">Mask</a>[i, j];</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                    r += currPixel.R * coef;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                    g += currPixel.G * coef;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                    b += currPixel.B * coef;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_struct" href="../../d5/da7/a00144.html">MyColor</a>(</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                Math.Clamp((<span class="keywordtype">int</span>)(r), 0, 255),</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                Math.Clamp((<span class="keywordtype">int</span>)(g), 0, 255),</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                Math.Clamp((<span class="keywordtype">int</span>)(b), 0, 255)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            );</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+<div class="ttc" id="aa00116_html"><div class="ttname"><a href="../../d4/d3e/a00116.html">DummyPhotoshop</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l00005">BrightnessHistogram.cs:6</a></div></div>
+<div class="ttc" id="aa00117_html"><div class="ttname"><a href="../../d9/d4b/a00117.html">DummyPhotoshop.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00004">IPhoto.cs:5</a></div></div>
+<div class="ttc" id="aa00118_html"><div class="ttname"><a href="../../d8/d87/a00118.html">DummyPhotoshop.Filters</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l00003">BinarizationFilter.cs:4</a></div></div>
+<div class="ttc" id="aa00140_html"><div class="ttname"><a href="../../d5/db1/a00140.html">DummyPhotoshop.Data.IPhoto</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00006">IPhoto.cs:7</a></div></div>
+<div class="ttc" id="aa00144_html"><div class="ttname"><a href="../../d5/da7/a00144.html">DummyPhotoshop.Data.MyColor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dee/a00008_source.html#l00005">MyColor.cs:6</a></div></div>
+<div class="ttc" id="aa00192_html"><div class="ttname"><a href="../../dd/da2/a00192.html">DummyPhotoshop.Filters.MaskFilter</a></div><div class="ttdoc">Базовый класс для фильтра, который применяет определенную маску к каждому пикселю.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00009">MaskFilter.cs:10</a></div></div>
+<div class="ttc" id="aa00192_html_a21b9b302e5ccd5fdbdfd4a786db0d805"><div class="ttname"><a href="../../dd/da2/a00192.html#a21b9b302e5ccd5fdbdfd4a786db0d805">DummyPhotoshop.Filters.MaskFilter.PreProcess</a></div><div class="ttdeci">override void PreProcess(IPhoto photo)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00033">MaskFilter.cs:33</a></div></div>
+<div class="ttc" id="aa00192_html_a3a7274e36da0a872755044528778492e"><div class="ttname"><a href="../../dd/da2/a00192.html#a3a7274e36da0a872755044528778492e">DummyPhotoshop.Filters.MaskFilter.InitMask</a></div><div class="ttdeci">abstract void InitMask()</div><div class="ttdoc">Метод для инициализации Mask.</div></div>
+<div class="ttc" id="aa00192_html_a89ee2d87c20fb8af88a0b14c04a7fb97"><div class="ttname"><a href="../../dd/da2/a00192.html#a89ee2d87c20fb8af88a0b14c04a7fb97">DummyPhotoshop.Filters.MaskFilter.Mask</a></div><div class="ttdeci">double[,] Mask</div><div class="ttdoc">Маска для фильтра.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00022">MaskFilter.cs:22</a></div></div>
+<div class="ttc" id="aa00192_html_ac1bad8cc6988e4757dd4ea46e4da419a"><div class="ttname"><a href="../../dd/da2/a00192.html#ac1bad8cc6988e4757dd4ea46e4da419a">DummyPhotoshop.Filters.MaskFilter.Radius</a></div><div class="ttdeci">int Radius</div><div class="ttdoc">Радиус применяемой маски.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00014">MaskFilter.cs:14</a></div></div>
+<div class="ttc" id="aa00192_html_ad2ac245c989f713f43f8d799d8131752"><div class="ttname"><a href="../../dd/da2/a00192.html#ad2ac245c989f713f43f8d799d8131752">DummyPhotoshop.Filters.MaskFilter.ProcessPixel</a></div><div class="ttdeci">override MyColor ProcessPixel(int x, int y, IPhoto photo)</div><div class="ttdoc">Функция для обработки одного пикселя.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00039">MaskFilter.cs:39</a></div></div>
+<div class="ttc" id="aa00208_html"><div class="ttname"><a href="../../dc/d31/a00208.html">DummyPhotoshop.Filters.PixelFilter</a></div><div class="ttdoc">Базовый класс для фильтра, который обрабатывает каждый пиксель.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00010">PixelFilter.cs:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

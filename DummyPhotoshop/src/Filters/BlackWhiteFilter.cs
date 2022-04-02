@@ -7,10 +7,13 @@ namespace DummyPhotoshop.Filters
     /// </summary>
     /// <remarks>
     /// Каждая компонента текущего пикселя становится равна яркости этого пикселя.
-    /// <conceptualLink target="catNegative"></conceptualLink>
+    /// <example>
+    /// \image html cat.png
+    /// </example>
     /// </remarks>
     public class BlackWhiteFilter:PixelFilter
     {
+        
         protected override MyColor ProcessPixel(int x, int y, IPhoto photo)
         {
             MyColor pixel = photo.GetPixel(x, y);

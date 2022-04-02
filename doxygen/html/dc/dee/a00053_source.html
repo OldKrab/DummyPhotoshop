@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Исходный файл D:/source/c#/DummyPhotoshop/DummyPhotoshop/src/Filters/NoiseFilter.cs</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search",'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="../../dir_99033e81eccb7d6056f03e7c77aaf157.html">source</a></li><li class="navelem"><a class="el" href="../../dir_c8bc3e7ca3619f9692df6737a26c26da.html">c#</a></li><li class="navelem"><a class="el" href="../../dir_bca1017898745852755a16f111232f24.html">DummyPhotoshop</a></li><li class="navelem"><a class="el" href="../../dir_a97a09e2d8f731999d6da99eacd4ba84.html">DummyPhotoshop</a></li><li class="navelem"><a class="el" href="../../dir_257d4137bb9057acf1bc61d203db621a.html">src</a></li><li class="navelem"><a class="el" href="../../dir_f0e27185298f7371a3a4d330e867224b.html">Filters</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">NoiseFilter.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/dee/a00053.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using</span> System;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using</span> System.Collections.Concurrent;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using</span> <a class="code hl_namespace" href="../../d4/d3e/a00116.html">DummyPhotoshop</a>.<a class="code hl_namespace" href="../../d9/d4b/a00117.html">Data</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d8/d87/a00118.html">DummyPhotoshop.Filters</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../d1/d72/a00204.html">   10</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d1/d72/a00204.html">NoiseFilter</a> : <a class="code hl_class" href="../../dc/d31/a00208.html">PixelFilter</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d1/d72/a00204.html#a3356d107c359b05f5053a554ed7a02c0">   15</a></span>        <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_property" href="../../d1/d72/a00204.html#a3356d107c359b05f5053a554ed7a02c0">Percent</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="../../d1/d72/a00204.html#ae40a3ba408ac4b685c49fc7e24baedd6">   20</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="../../d1/d72/a00204.html#ae40a3ba408ac4b685c49fc7e24baedd6">IsMonochrome</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">private</span> <span class="keyword">static</span> ConcurrentDictionary&lt;(int, int, int), (<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>)&gt; _cashedRandDeltaPixel = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> RandDeltaPixel(<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <a class="code hl_interface" href="../../d5/db1/a00140.html">IPhoto</a> photo, out <span class="keywordtype">int</span> dr, out <span class="keywordtype">int</span> dg, out <span class="keywordtype">int</span> db)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            var c = photo.GetHashCode();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordflow">if</span> (_cashedRandDeltaPixel.ContainsKey((i, j, c)))</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                var value = _cashedRandDeltaPixel[(i, j, c)];</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                dr = value.Item1;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                dg = value.Item2;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                db = value.Item3;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            }</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            dr = ((i * 564 + j * 53446 + 4234).ToString() + i * j * 1245 + c).GetHashCode() % 256;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            dg = ((i * 1234 + j * 73380 + 974).ToString() + i * j * 4254 + c).GetHashCode() % 256;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            db = ((i * 237 + j * 3275 + 395).ToString() + i * j * 39437 + c).GetHashCode() % 256;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            _cashedRandDeltaPixel[(i, j, c)] = (dr, dg, db);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d1/d72/a00204.html#ad4e6277dcf151ba86e0d92f2f0a268dc">   40</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <a class="code hl_struct" href="../../d5/da7/a00144.html">MyColor</a> <a class="code hl_function" href="../../d1/d72/a00204.html#ad4e6277dcf151ba86e0d92f2f0a268dc">ProcessPixel</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <a class="code hl_interface" href="../../d5/db1/a00140.html">IPhoto</a> photo)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            var pixel = photo.<a class="code hl_function" href="../../d5/db1/a00140.html#ad2c917369c65e064713866a84a7af571">GetPixel</a>(x, y);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordtype">int</span> dr, dg, db;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            RandDeltaPixel(x, y, photo, out dr, out dg, out db);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            dr = (int)(dr * <a class="code hl_property" href="../../d1/d72/a00204.html#a3356d107c359b05f5053a554ed7a02c0">Percent</a>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            dg = (int)(dg * <a class="code hl_property" href="../../d1/d72/a00204.html#a3356d107c359b05f5053a554ed7a02c0">Percent</a>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            db = (int)(db * <a class="code hl_property" href="../../d1/d72/a00204.html#a3356d107c359b05f5053a554ed7a02c0">Percent</a>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">if</span> (<a class="code hl_property" href="../../d1/d72/a00204.html#ae40a3ba408ac4b685c49fc7e24baedd6">IsMonochrome</a>)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                dg = db = dr;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_struct" href="../../d5/da7/a00144.html">MyColor</a>(</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                Math.Clamp(pixel.R + dr, 0, 255),</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                Math.Clamp(pixel.G + dg, 0, 255),</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                Math.Clamp(pixel.B + db, 0, 255)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                );</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+<div class="ttc" id="aa00116_html"><div class="ttname"><a href="../../d4/d3e/a00116.html">DummyPhotoshop</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d46/a00002_source.html#l00005">BrightnessHistogram.cs:6</a></div></div>
+<div class="ttc" id="aa00117_html"><div class="ttname"><a href="../../d9/d4b/a00117.html">DummyPhotoshop.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00004">IPhoto.cs:5</a></div></div>
+<div class="ttc" id="aa00118_html"><div class="ttname"><a href="../../d8/d87/a00118.html">DummyPhotoshop.Filters</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l00003">BinarizationFilter.cs:4</a></div></div>
+<div class="ttc" id="aa00140_html"><div class="ttname"><a href="../../d5/db1/a00140.html">DummyPhotoshop.Data.IPhoto</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00006">IPhoto.cs:7</a></div></div>
+<div class="ttc" id="aa00140_html_ad2c917369c65e064713866a84a7af571"><div class="ttname"><a href="../../d5/db1/a00140.html#ad2c917369c65e064713866a84a7af571">DummyPhotoshop.Data.IPhoto.GetPixel</a></div><div class="ttdeci">MyColor GetPixel(int x, int y)</div></div>
+<div class="ttc" id="aa00144_html"><div class="ttname"><a href="../../d5/da7/a00144.html">DummyPhotoshop.Data.MyColor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dee/a00008_source.html#l00005">MyColor.cs:6</a></div></div>
+<div class="ttc" id="aa00204_html"><div class="ttname"><a href="../../d1/d72/a00204.html">DummyPhotoshop.Filters.NoiseFilter</a></div><div class="ttdoc">Фильтр, добавляющий шум к изображению</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00010">NoiseFilter.cs:11</a></div></div>
+<div class="ttc" id="aa00204_html_a3356d107c359b05f5053a554ed7a02c0"><div class="ttname"><a href="../../d1/d72/a00204.html#a3356d107c359b05f5053a554ed7a02c0">DummyPhotoshop.Filters.NoiseFilter.Percent</a></div><div class="ttdeci">double Percent</div><div class="ttdoc">Степень шума</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00015">NoiseFilter.cs:15</a></div></div>
+<div class="ttc" id="aa00204_html_ad4e6277dcf151ba86e0d92f2f0a268dc"><div class="ttname"><a href="../../d1/d72/a00204.html#ad4e6277dcf151ba86e0d92f2f0a268dc">DummyPhotoshop.Filters.NoiseFilter.ProcessPixel</a></div><div class="ttdeci">override MyColor ProcessPixel(int x, int y, IPhoto photo)</div><div class="ttdoc">Функция для обработки одного пикселя.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00040">NoiseFilter.cs:40</a></div></div>
+<div class="ttc" id="aa00204_html_ae40a3ba408ac4b685c49fc7e24baedd6"><div class="ttname"><a href="../../d1/d72/a00204.html#ae40a3ba408ac4b685c49fc7e24baedd6">DummyPhotoshop.Filters.NoiseFilter.IsMonochrome</a></div><div class="ttdeci">bool IsMonochrome</div><div class="ttdoc">Если true, то шум черно-белый, иначе цветной.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00020">NoiseFilter.cs:20</a></div></div>
+<div class="ttc" id="aa00208_html"><div class="ttname"><a href="../../dc/d31/a00208.html">DummyPhotoshop.Filters.PixelFilter</a></div><div class="ttdoc">Базовый класс для фильтра, который обрабатывает каждый пиксель.</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00010">PixelFilter.cs:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

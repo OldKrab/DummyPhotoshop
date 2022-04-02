@@ -2,7 +2,10 @@
 
 namespace DummyPhotoshop.Filters
 {
-    public class EmbossingFilter:IFilter
+    /// <summary>
+    /// Фильтр тиснения
+    /// </summary>
+    public class EmbossingFilter : IFilter
     {
         private CompoundFilter _filter;
         public EmbossingFilter()
@@ -22,6 +25,8 @@ namespace DummyPhotoshop.Filters
             _filter.Filters.AddLast(maskFilter);
             _filter.Filters.AddLast(brightFilter);
         }
+
+        /// <inheritdoc/>
         public IPhoto ProcessImage(IPhoto photo)
         {
             return _filter.ProcessImage(photo);

@@ -4,13 +4,22 @@ using DummyPhotoshop.Data;
 
 namespace DummyPhotoshop.Filters
 {
+    /// <summary>
+    /// Фильтр, добавляющий шум к изображению
+    /// </summary>
     public class NoiseFilter : PixelFilter
     {
-        private static ConcurrentDictionary<(int, int, int), (int, int, int)> _cashedRandDeltaPixel = new();
-
+        /// <summary>
+        /// Степень шума
+        /// </summary>
         public double Percent { get; set; }
-        public bool Monochrome { get; set; }
 
+        /// <summary>
+        /// Если <see langword="true"/>, то шум черно-белый, иначе цветной.
+        /// </summary>
+        public bool IsMonochrome { get; set; }
+
+        private static ConcurrentDictionary<(int, int, int), (int, int, int)> _cashedRandDeltaPixel = new();
         private void RandDeltaPixel(int i, int j, IPhoto photo, out int dr, out int dg, out int db)
         {
             var c = photo.GetHashCode();
@@ -36,7 +45,7 @@ namespace DummyPhotoshop.Filters
             dr = (int)(dr * Percent);
             dg = (int)(dg * Percent);
             db = (int)(db * Percent);
-            if (Monochrome)
+            if (IsMonochrome)
                 dg = db = dr;
             return new MyColor(
                 Math.Clamp(pixel.R + dr, 0, 255),

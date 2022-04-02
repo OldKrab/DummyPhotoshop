@@ -1,6 +1,9 @@
 ﻿
 namespace DummyPhotoshop.Filters
 {
+    /// <summary>
+    /// Фильтр шумоподавления, использующий равномерный метод.
+    /// </summary>
     public class UniformDenoiseFilter : MaskFilter
     {
         protected override void InitMask()

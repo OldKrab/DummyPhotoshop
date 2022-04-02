@@ -1,0 +1,5 @@
+<map id="DummyPhotoshop.Filters.BinarizationFilter" name="DummyPhotoshop.Filters.BinarizationFilter">
+<area shape="rect" id="node1" title="Фильтр бинаризации." alt="" coords="5,285,247,407"/>
+<area shape="rect" id="node2" href="$dc/d31/a00208.html" title="Базовый класс для фильтра, который обрабатывает каждый пиксель" alt="" coords="63,131,189,237"/>
+<area shape="rect" id="node3" href="$da/d15/a00188.html" title="Интерфейс фильтра для изображений" alt="" coords="63,5,189,83"/>
+</map>

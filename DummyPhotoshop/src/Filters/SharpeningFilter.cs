@@ -1,5 +1,8 @@
 ﻿namespace DummyPhotoshop.Filters
 {
+    /// <summary>
+    /// Фильтр изменения резкости изображения.
+    /// </summary>
     public class SharpeningFilter : MaskFilter
     {
         public double Coefficient { get; set; } = 2;

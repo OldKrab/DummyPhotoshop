@@ -4,7 +4,7 @@ using DummyPhotoshop.Data;
 namespace DummyPhotoshop.Filters
 {
     /// <summary>
-    /// Базовый класс для фильтра, который применяет определенную маску к каждому пикселю
+    /// Базовый класс для фильтра, который применяет определенную маску к каждому пикселю.
     /// </summary>
     public abstract class MaskFilter : PixelFilter 
     {

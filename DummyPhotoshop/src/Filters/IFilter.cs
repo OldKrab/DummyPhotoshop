@@ -3,7 +3,7 @@
 namespace DummyPhotoshop.Filters
 {
     /// <summary>
-    /// Интерфейс фильтра для изображений
+    /// Интерфейс фильтра для изображений.
     /// </summary>
     public interface IFilter
     {
@@ -12,6 +12,6 @@ namespace DummyPhotoshop.Filters
         /// </summary>
         /// <param name="photo">Обрабатываемое изображение</param>
         /// <returns>Результирующее изображение</returns>
-        public IPhoto ProcessImage(IPhoto photo);
+        IPhoto ProcessImage(IPhoto photo);
     }
 }

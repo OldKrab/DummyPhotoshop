@@ -1,0 +1,11 @@
+digraph "D:/source/c#/DummyPhotoshop/DummyPhotoshop/src/Windows"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_2b96d0357116060162d8bea8bc00efbc {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", style="filled,dashed,", label="src", fontname="Helvetica", fontsize="10", URL="dir_2b96d0357116060162d8bea8bc00efbc.html"]
+  dir_d19f188d7bf31a1a9a4948cb0217a1a7 [shape=box, label="Windows", style="filled,bold,", fillcolor="#edf0f7", color="grey25", URL="dir_d19f188d7bf31a1a9a4948cb0217a1a7.html"];
+  }
+}

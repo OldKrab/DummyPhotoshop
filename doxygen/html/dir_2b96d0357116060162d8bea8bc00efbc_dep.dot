@@ -1,0 +1,18 @@
+digraph "D:/source/c#/DummyPhotoshop/DummyPhotoshop/src"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_b17e3b9f6a3c64a34ac5beee010ca08c {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,dashed,", label="DummyPhotoshop", fontname="Helvetica", fontsize="10", URL="dir_b17e3b9f6a3c64a34ac5beee010ca08c.html"]
+  subgraph clusterdir_2b96d0357116060162d8bea8bc00efbc {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,bold,", label="", fontname="Helvetica", fontsize="10", URL="dir_2b96d0357116060162d8bea8bc00efbc.html"]
+    dir_2b96d0357116060162d8bea8bc00efbc [shape=plaintext, label="src"];
+  dir_763dc47a5fcbcc88f0c6a06278e8dcff [shape=box, label="Data", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_763dc47a5fcbcc88f0c6a06278e8dcff.html"];
+  dir_c81ebfc9e44ffe451dda8cfbd1eaec15 [shape=box, label="Filters", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_c81ebfc9e44ffe451dda8cfbd1eaec15.html"];
+  dir_f1fe21437a7585b4eca6cfa4fc2d995c [shape=box, label="Helpers", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_f1fe21437a7585b4eca6cfa4fc2d995c.html"];
+  dir_d19f188d7bf31a1a9a4948cb0217a1a7 [shape=box, label="Windows", style="filled,", fillcolor="#a2b4d6", color="grey25", URL="dir_d19f188d7bf31a1a9a4948cb0217a1a7.html"];
+  }
+  }
+}

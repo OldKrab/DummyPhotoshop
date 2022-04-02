@@ -4,7 +4,7 @@ using DummyPhotoshop.Data;
 namespace DummyPhotoshop.Filters
 {
     /// <summary>
-    /// Фильтр шумоподавления, использующий медианную фильтрацию
+    /// Фильтр шумоподавления, использующий медианную фильтрацию.
     /// </summary>
     public class MedianDenoiseFilter : MaskFilter
     {

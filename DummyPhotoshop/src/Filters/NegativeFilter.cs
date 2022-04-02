@@ -2,6 +2,9 @@
 
 namespace DummyPhotoshop.Filters
 {
+    /// <summary>
+    /// Фильтр-негатив.
+    /// </summary>
     public class NegativeFilter:PixelFilter
     {
         protected override MyColor ProcessPixel(int x, int y, IPhoto photo)
