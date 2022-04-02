@@ -3,10 +3,9 @@ var indexSectionsWithContent =
   0: "abcdefghilmnoprstuvw",
   1: "abcefgimnpsu",
   2: "d",
-  3: "abcegimnpsu",
-  4: "abcdegimoprsu",
-  5: "bgmruv",
-  6: "bcdfhilmoprtvw"
+  3: "abcdegimoprsu",
+  4: "bgmruv",
+  5: "bcdfhilmoprtvw"
 };
 
 var indexSectionNames =
@@ -14,10 +13,9 @@ var indexSectionNames =
   0: "all",
   1: "classes",
   2: "namespaces",
-  3: "files",
-  4: "functions",
-  5: "variables",
-  6: "properties"
+  3: "functions",
+  4: "variables",
+  5: "properties"
 };
 
 var indexSectionLabels =
@@ -25,9 +23,8 @@ var indexSectionLabels =
   0: "Указатель",
   1: "Классы",
   2: "Пространства имен",
-  3: "Файлы",
-  4: "Функции",
-  5: "Переменные",
-  6: "Свойства"
+  3: "Функции",
+  4: "Переменные",
+  5: "Свойства"
 };
 

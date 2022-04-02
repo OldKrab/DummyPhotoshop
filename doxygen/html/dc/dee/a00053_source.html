@@ -12,6 +12,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -69,7 +76,7 @@ $(function() {
   <div class="headertitle"><div class="title">NoiseFilter.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../dc/dee/a00053.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using</span> System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using</span> System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using</span> System.Collections.Concurrent;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using</span> <a class="code hl_namespace" href="../../d4/d3e/a00116.html">DummyPhotoshop</a>.<a class="code hl_namespace" href="../../d9/d4b/a00117.html">Data</a>;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
@@ -101,7 +108,7 @@ $(function() {
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d1/d72/a00204.html#ad4e6277dcf151ba86e0d92f2f0a268dc">   40</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <a class="code hl_struct" href="../../d5/da7/a00144.html">MyColor</a> <a class="code hl_function" href="../../d1/d72/a00204.html#ad4e6277dcf151ba86e0d92f2f0a268dc">ProcessPixel</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <a class="code hl_interface" href="../../d5/db1/a00140.html">IPhoto</a> photo)</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            var pixel = photo.<a class="code hl_function" href="../../d5/db1/a00140.html#ad2c917369c65e064713866a84a7af571">GetPixel</a>(x, y);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            var pixel = photo.GetPixel(x, y);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordtype">int</span> dr, dg, db;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            RandDeltaPixel(x, y, photo, out dr, out dg, out db);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            dr = (int)(dr * <a class="code hl_property" href="../../d1/d72/a00204.html#a3356d107c359b05f5053a554ed7a02c0">Percent</a>);</div>
@@ -122,7 +129,6 @@ $(function() {
 <div class="ttc" id="aa00117_html"><div class="ttname"><a href="../../d9/d4b/a00117.html">DummyPhotoshop.Data</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00004">IPhoto.cs:5</a></div></div>
 <div class="ttc" id="aa00118_html"><div class="ttname"><a href="../../d8/d87/a00118.html">DummyPhotoshop.Filters</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l00003">BinarizationFilter.cs:4</a></div></div>
 <div class="ttc" id="aa00140_html"><div class="ttname"><a href="../../d5/db1/a00140.html">DummyPhotoshop.Data.IPhoto</a></div><div class="ttdef"><b>Definition:</b> <a href="../../dd/dad/a00005_source.html#l00006">IPhoto.cs:7</a></div></div>
-<div class="ttc" id="aa00140_html_ad2c917369c65e064713866a84a7af571"><div class="ttname"><a href="../../d5/db1/a00140.html#ad2c917369c65e064713866a84a7af571">DummyPhotoshop.Data.IPhoto.GetPixel</a></div><div class="ttdeci">MyColor GetPixel(int x, int y)</div></div>
 <div class="ttc" id="aa00144_html"><div class="ttname"><a href="../../d5/da7/a00144.html">DummyPhotoshop.Data.MyColor</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d4/dee/a00008_source.html#l00005">MyColor.cs:6</a></div></div>
 <div class="ttc" id="aa00204_html"><div class="ttname"><a href="../../d1/d72/a00204.html">DummyPhotoshop.Filters.NoiseFilter</a></div><div class="ttdoc">Фильтр, добавляющий шум к изображению</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00010">NoiseFilter.cs:11</a></div></div>
 <div class="ttc" id="aa00204_html_a3356d107c359b05f5053a554ed7a02c0"><div class="ttname"><a href="../../d1/d72/a00204.html#a3356d107c359b05f5053a554ed7a02c0">DummyPhotoshop.Filters.NoiseFilter.Percent</a></div><div class="ttdeci">double Percent</div><div class="ttdoc">Степень шума</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00015">NoiseFilter.cs:15</a></div></div>

@@ -1,4 +1,5 @@
-<map id="DummyPhotoshop.Filters.CompoundFilter" name="DummyPhotoshop.Filters.CompoundFilter">
-<area shape="rect" id="node1" title="Фильтр&#45;компоновщик." alt="" coords="5,131,240,237"/>
-<area shape="rect" id="node2" href="$da/d15/a00188.html" title="Интерфейс фильтра для изображений" alt="" coords="60,5,185,83"/>
+<map id="DummyPhotoshop.Filters.BrightnessFilter" name="DummyPhotoshop.Filters.BrightnessFilter">
+<area shape="rect" id="node1" title="Фильтр изменения яркости." alt="" coords="5,285,240,377"/>
+<area shape="rect" id="node2" href="$dd/ded/a00211.html" title="Базовый класс для фильтра, который обрабатывает каждый пиксель." alt="" coords="60,131,185,237"/>
+<area shape="rect" id="node3" href="$d9/dd0/a00191.html" title="Интерфейс фильтра для изображений." alt="" coords="60,5,185,83"/>
 </map>

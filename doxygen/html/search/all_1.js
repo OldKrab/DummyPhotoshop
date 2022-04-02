@@ -1,21 +1,13 @@
 var searchData=
 [
-  ['b_0',['B',['../d5/da7/a00144.html#a55fe3e37f789f300df64c63756a8abe2',1,'DummyPhotoshop::Data::MyColor']]],
-  ['binarizationfilter_1',['BinarizationFilter',['../de/d38/a00160.html',1,'DummyPhotoshop::Filters']]],
-  ['binarizationfilter_2ecs_2',['BinarizationFilter.cs',['../db/db2/a00020.html',1,'']]],
-  ['binarizationwindow_3',['BinarizationWindow',['../d7/d40/a00236.html#ab4d875d8980529d7e7032c5732a1fb50',1,'DummyPhotoshop.Windows.BinarizationWindow.BinarizationWindow()'],['../d7/d40/a00236.html',1,'DummyPhotoshop.Windows.BinarizationWindow']]],
-  ['binarizationwindow_2ecs_4',['BinarizationWindow.cs',['../da/dec/a00080.html',1,'']]],
-  ['binarizationwindow_2edesigner_2ecs_5',['BinarizationWindow.Designer.cs',['../d2/d1f/a00083.html',1,'']]],
-  ['bitmap_6',['Bitmap',['../d5/db1/a00140.html#a2dd837646da0a4972f744dda7e5f8029',1,'DummyPhotoshop.Data.IPhoto.Bitmap()'],['../db/d48/a00148.html#a49a6234b634f9f912f1be16c9ec56ee4',1,'DummyPhotoshop.Data.Photo.Bitmap()'],['../d7/d9a/a00152.html#a0075b35b78734066e8388f8d4d364944',1,'DummyPhotoshop.Data.PhotoCrop.Bitmap()']]],
-  ['bits_7',['Bits',['../db/d48/a00148.html#aa912be02460b5c937303c8e2f8e00b03',1,'DummyPhotoshop::Data::Photo']]],
-  ['bitshandle_8',['BitsHandle',['../db/d48/a00148.html#a69591060ce067b039baca17be2997c57',1,'DummyPhotoshop::Data::Photo']]],
-  ['blackwhitefilter_9',['BlackWhiteFilter',['../db/ddf/a00164.html',1,'DummyPhotoshop::Filters']]],
-  ['blackwhitefilter_2ecs_10',['BlackWhiteFilter.cs',['../d3/d52/a00023.html',1,'']]],
-  ['brightnesscontrastwindow_11',['BrightnessContrastWindow',['../d9/d21/a00240.html#ab94d0639fd5b05a15df799a380c4e22c',1,'DummyPhotoshop.Windows.BrightnessContrastWindow.BrightnessContrastWindow()'],['../d9/d21/a00240.html',1,'DummyPhotoshop.Windows.BrightnessContrastWindow']]],
-  ['brightnesscontrastwindow_2ecs_12',['BrightnessContrastWindow.cs',['../da/d2a/a00086.html',1,'']]],
-  ['brightnesscontrastwindow_2edesigner_2ecs_13',['BrightnessContrastWindow.Designer.cs',['../db/dab/a00089.html',1,'']]],
-  ['brightnessfilter_14',['BrightnessFilter',['../dd/da7/a00168.html',1,'DummyPhotoshop::Filters']]],
-  ['brightnessfilter_2ecs_15',['BrightnessFilter.cs',['../d6/d5b/a00026.html',1,'']]],
-  ['brightnesshistogram_16',['BrightnessHistogram',['../d0/d5e/a00136.html',1,'DummyPhotoshop']]],
-  ['brightnesshistogram_2ecs_17',['BrightnessHistogram.cs',['../d7/d46/a00002.html',1,'']]]
+  ['b_0',['B',['../d0/d4a/a00147.html#a55fe3e37f789f300df64c63756a8abe2',1,'DummyPhotoshop::Data::MyColor']]],
+  ['binarizationfilter_1',['BinarizationFilter',['../dd/dae/a00163.html',1,'DummyPhotoshop::Filters']]],
+  ['binarizationwindow_2',['BinarizationWindow',['../d0/d27/a00239.html#ab4d875d8980529d7e7032c5732a1fb50',1,'DummyPhotoshop.Windows.BinarizationWindow.BinarizationWindow()'],['../d0/d27/a00239.html',1,'DummyPhotoshop.Windows.BinarizationWindow']]],
+  ['bitmap_3',['Bitmap',['../d7/dce/a00143.html#a2dd837646da0a4972f744dda7e5f8029',1,'DummyPhotoshop.Data.IPhoto.Bitmap()'],['../dd/db2/a00151.html#a49a6234b634f9f912f1be16c9ec56ee4',1,'DummyPhotoshop.Data.Photo.Bitmap()'],['../d3/df8/a00155.html#a0075b35b78734066e8388f8d4d364944',1,'DummyPhotoshop.Data.PhotoCrop.Bitmap()']]],
+  ['bits_4',['Bits',['../dd/db2/a00151.html#aa912be02460b5c937303c8e2f8e00b03',1,'DummyPhotoshop::Data::Photo']]],
+  ['bitshandle_5',['BitsHandle',['../dd/db2/a00151.html#a69591060ce067b039baca17be2997c57',1,'DummyPhotoshop::Data::Photo']]],
+  ['blackwhitefilter_6',['BlackWhiteFilter',['../dc/de6/a00167.html',1,'DummyPhotoshop::Filters']]],
+  ['brightnesscontrastwindow_7',['BrightnessContrastWindow',['../d6/d82/a00243.html#ab94d0639fd5b05a15df799a380c4e22c',1,'DummyPhotoshop.Windows.BrightnessContrastWindow.BrightnessContrastWindow()'],['../d6/d82/a00243.html',1,'DummyPhotoshop.Windows.BrightnessContrastWindow']]],
+  ['brightnessfilter_8',['BrightnessFilter',['../d1/d0d/a00171.html',1,'DummyPhotoshop::Filters']]],
+  ['brightnesshistogram_9',['BrightnessHistogram',['../de/d14/a00139.html',1,'DummyPhotoshop']]]
 ];

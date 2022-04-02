@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['photo_0',['Photo',['../db/d48/a00148.html',1,'DummyPhotoshop::Data']]],
-  ['photocrop_1',['PhotoCrop',['../d7/d9a/a00152.html',1,'DummyPhotoshop::Data']]],
-  ['pixelfilter_2',['PixelFilter',['../dc/d31/a00208.html',1,'DummyPhotoshop::Filters']]]
+  ['photo_0',['Photo',['../dd/db2/a00151.html',1,'DummyPhotoshop::Data']]],
+  ['photocrop_1',['PhotoCrop',['../d3/df8/a00155.html',1,'DummyPhotoshop::Data']]],
+  ['pixelfilter_2',['PixelFilter',['../dd/ded/a00211.html',1,'DummyPhotoshop::Filters']]]
 ];

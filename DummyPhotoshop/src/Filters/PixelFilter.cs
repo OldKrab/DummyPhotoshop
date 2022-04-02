@@ -26,6 +26,10 @@ namespace DummyPhotoshop.Filters
             return resPhoto;
         }
 
+        /// <summary>
+        /// Предварительные действия перед обработкой.
+        /// </summary>
+        /// <param name="photo">Обрабатываемое изображение</param>
         protected virtual void PreProcess(IPhoto photo)
         {
         }
@@ -35,7 +39,7 @@ namespace DummyPhotoshop.Filters
         /// </summary>
         /// <param name="x">X-координата пикселя</param>
         /// <param name="y">Y-координата пикселя</param>
-        /// <param name="photo">Исходное изображение</param>
+        /// <param name="photo">Обрабатываемое изображение</param>
         /// <returns>Вычисленный пиксель</returns>
         protected abstract MyColor ProcessPixel(int x, int y, IPhoto photo);
 

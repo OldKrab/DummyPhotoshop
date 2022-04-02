@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['uniformdenoisefilter_0',['UniformDenoiseFilter',['../d6/d43/a00216.html',1,'DummyPhotoshop::Filters']]],
-  ['usermaskfilter_1',['UserMaskFilter',['../d5/d0b/a00220.html',1,'DummyPhotoshop::Filters']]]
+  ['uniformdenoisefilter_0',['UniformDenoiseFilter',['../dd/df3/a00219.html',1,'DummyPhotoshop::Filters']]],
+  ['usermaskfilter_1',['UserMaskFilter',['../dc/d28/a00223.html',1,'DummyPhotoshop::Filters']]]
 ];

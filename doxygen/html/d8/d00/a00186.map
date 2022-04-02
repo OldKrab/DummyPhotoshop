@@ -1,3 +1,6 @@
-<map id="DummyPhotoshop.Filters.IFilter" name="DummyPhotoshop.Filters.IFilter">
-<area shape="rect" id="node1" title="Интерфейс фильтра для изображений" alt="" coords="5,5,211,83"/>
+<map id="DummyPhotoshop.Filters.GaussianDenoiseFilter" name="DummyPhotoshop.Filters.GaussianDenoiseFilter">
+<area shape="rect" id="node1" title="Фильтр шумоподавления, использующий метод Гаусса." alt="" coords="5,455,233,547"/>
+<area shape="rect" id="node2" href="$d3/d2a/a00195.html" title="Базовый класс для фильтра, который применяет определенную маску к каждому пикселю." alt="" coords="60,285,179,407"/>
+<area shape="rect" id="node3" href="$dd/ded/a00211.html" title="Базовый класс для фильтра, который обрабатывает каждый пиксель." alt="" coords="57,131,182,237"/>
+<area shape="rect" id="node4" href="$d9/dd0/a00191.html" title="Интерфейс фильтра для изображений." alt="" coords="57,5,182,83"/>
 </map>

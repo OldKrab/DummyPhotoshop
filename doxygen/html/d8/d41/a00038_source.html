@@ -12,6 +12,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -69,13 +76,13 @@ $(function() {
   <div class="headertitle"><div class="title">GaussianDenoiseFilter.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d8/d41/a00038.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using</span> System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using</span> System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d8/d87/a00118.html">DummyPhotoshop.Filters</a></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../d2/d94/a00184.html">    8</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d2/d94/a00184.html">GaussianDenoiseFilter</a> : <a class="code hl_class" href="../../dd/da2/a00192.html">MaskFilter</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../d2/d94/a00184.html#aa9a156b023afeae6360c0fe8daecbd5f">   10</a></span>        <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_property" href="../../d2/d94/a00184.html#aa9a156b023afeae6360c0fe8daecbd5f">Variance</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; } = 1;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keyword">public</span> <span class="keywordtype">double</span> Variance { <span class="keyword">get</span>; <span class="keyword">set</span>; } = 1;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../d2/d94/a00184.html#a80112ec1b409b10250bc8dd11bbf2a1f">   12</a></span>        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/d94/a00184.html#a80112ec1b409b10250bc8dd11bbf2a1f">InitMask</a>()</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        {</div>
@@ -109,14 +116,13 @@ $(function() {
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            }</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">private</span> <span class="keywordtype">double</span> CalcH(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) =&gt; Math.Exp(-(x * x + y * y) / (2 * <a class="code hl_property" href="../../d2/d94/a00184.html#aa9a156b023afeae6360c0fe8daecbd5f">Variance</a> * <a class="code hl_property" href="../../d2/d94/a00184.html#aa9a156b023afeae6360c0fe8daecbd5f">Variance</a>));</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">private</span> <span class="keywordtype">double</span> CalcH(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) =&gt; Math.Exp(-(x * x + y * y) / (2 * Variance * Variance));</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
 <div class="ttc" id="aa00118_html"><div class="ttname"><a href="../../d8/d87/a00118.html">DummyPhotoshop.Filters</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/db2/a00020_source.html#l00003">BinarizationFilter.cs:4</a></div></div>
 <div class="ttc" id="aa00184_html"><div class="ttname"><a href="../../d2/d94/a00184.html">DummyPhotoshop.Filters.GaussianDenoiseFilter</a></div><div class="ttdoc">Фильтр шумоподавления, использующий метод Гаусса.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d41/a00038_source.html#l00008">GaussianDenoiseFilter.cs:9</a></div></div>
 <div class="ttc" id="aa00184_html_a80112ec1b409b10250bc8dd11bbf2a1f"><div class="ttname"><a href="../../d2/d94/a00184.html#a80112ec1b409b10250bc8dd11bbf2a1f">DummyPhotoshop.Filters.GaussianDenoiseFilter.InitMask</a></div><div class="ttdeci">override void InitMask()</div><div class="ttdoc">Метод для инициализации Mask.</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d41/a00038_source.html#l00012">GaussianDenoiseFilter.cs:12</a></div></div>
-<div class="ttc" id="aa00184_html_aa9a156b023afeae6360c0fe8daecbd5f"><div class="ttname"><a href="../../d2/d94/a00184.html#aa9a156b023afeae6360c0fe8daecbd5f">DummyPhotoshop.Filters.GaussianDenoiseFilter.Variance</a></div><div class="ttdeci">double Variance</div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d41/a00038_source.html#l00010">GaussianDenoiseFilter.cs:10</a></div></div>
 <div class="ttc" id="aa00192_html"><div class="ttname"><a href="../../dd/da2/a00192.html">DummyPhotoshop.Filters.MaskFilter</a></div><div class="ttdoc">Базовый класс для фильтра, который применяет определенную маску к каждому пикселю.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00009">MaskFilter.cs:10</a></div></div>
 <div class="ttc" id="aa00192_html_a89ee2d87c20fb8af88a0b14c04a7fb97"><div class="ttname"><a href="../../dd/da2/a00192.html#a89ee2d87c20fb8af88a0b14c04a7fb97">DummyPhotoshop.Filters.MaskFilter.Mask</a></div><div class="ttdeci">double[,] Mask</div><div class="ttdoc">Маска для фильтра.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00022">MaskFilter.cs:22</a></div></div>
 <div class="ttc" id="aa00192_html_ac1bad8cc6988e4757dd4ea46e4da419a"><div class="ttname"><a href="../../dd/da2/a00192.html#ac1bad8cc6988e4757dd4ea46e4da419a">DummyPhotoshop.Filters.MaskFilter.Radius</a></div><div class="ttdeci">int Radius</div><div class="ttdoc">Радиус применяемой маски.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00014">MaskFilter.cs:14</a></div></div>

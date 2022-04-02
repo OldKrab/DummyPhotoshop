@@ -12,6 +12,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -69,7 +76,7 @@ $(function() {
   <div class="headertitle"><div class="title">AddNoiseWindow.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../db/db6/a00074.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using</span> System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using</span> System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using</span> System.Windows.Forms;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using</span> <a class="code hl_namespace" href="../../d4/d3e/a00116.html">DummyPhotoshop</a>.<a class="code hl_namespace" href="../../d9/d4b/a00117.html">Data</a>;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using</span> <a class="code hl_namespace" href="../../d4/d3e/a00116.html">DummyPhotoshop</a>.<a class="code hl_namespace" href="../../d8/d87/a00118.html">Filters</a>;</div>
@@ -83,10 +90,10 @@ $(function() {
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../dd/dd7/a00248.html">MainWindow</a> _mainWindow;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">private</span> <span class="keywordtype">double</span> _noiseMultiplier = 0.01;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keyword">private</span> <span class="keywordtype">double</span> _maxNoise = 4;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../d0/d53/a00232.html#a79907fa4d63c48c507093035583a9a78">   15</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="../../d0/d53/a00232.html#a79907fa4d63c48c507093035583a9a78">AddNoiseWindow</a>(<a class="code hl_class" href="../../dd/dd7/a00248.html">MainWindow</a> mainWindow)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d0/d53/a00232.html">AddNoiseWindow</a>(<a class="code hl_class" href="../../dd/dd7/a00248.html">MainWindow</a> mainWindow)</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            InitializeComponent();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            _photo = mainWindow.<a class="code hl_property" href="../../dd/dd7/a00248.html#a23cc05891304f3aaf02d66a99eba0325">Photo</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            _photo = mainWindow.Photo;</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            _noiseFilter = <span class="keyword">new</span> <a class="code hl_class" href="../../d1/d72/a00204.html">NoiseFilter</a>();</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            _mainWindow = mainWindow;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            noiseTrackbar.Value = 0;</div>
@@ -110,14 +117,14 @@ $(function() {
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            noiseTextBox.Text = noiseTrackbar.Value.ToString();</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            _noiseFilter.<a class="code hl_property" href="../../d1/d72/a00204.html#a3356d107c359b05f5053a554ed7a02c0">Percent</a> = noiseTrackbar.Value * _noiseMultiplier;</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            var resPhoto = _noiseFilter.<a class="code hl_function" href="../../dc/d31/a00208.html#aa27a23559ceced6497f97d0cdbe8472d">ProcessImage</a>(_photo);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            _mainWindow.<a class="code hl_function" href="../../dd/dd7/a00248.html#acabbd087bf9aa3f20f5db3b99cd7d902">SetPhoto</a>(resPhoto);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            _mainWindow.SetPhoto(resPhoto);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> MonocromeCheckBoxCheckedChanged(<span class="keywordtype">object</span> sender, EventArgs e)</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            _noiseFilter.<a class="code hl_property" href="../../d1/d72/a00204.html#ae40a3ba408ac4b685c49fc7e24baedd6">IsMonochrome</a> = monocromeCheckBox.Checked;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            var resPhoto = _noiseFilter.<a class="code hl_function" href="../../dc/d31/a00208.html#aa27a23559ceced6497f97d0cdbe8472d">ProcessImage</a>(_photo);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            _mainWindow.<a class="code hl_function" href="../../dd/dd7/a00248.html#acabbd087bf9aa3f20f5db3b99cd7d902">SetPhoto</a>(resPhoto);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            _mainWindow.SetPhoto(resPhoto);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        }</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
@@ -131,10 +138,7 @@ $(function() {
 <div class="ttc" id="aa00204_html_ae40a3ba408ac4b685c49fc7e24baedd6"><div class="ttname"><a href="../../d1/d72/a00204.html#ae40a3ba408ac4b685c49fc7e24baedd6">DummyPhotoshop.Filters.NoiseFilter.IsMonochrome</a></div><div class="ttdeci">bool IsMonochrome</div><div class="ttdoc">Если true, то шум черно-белый, иначе цветной.</div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dee/a00053_source.html#l00020">NoiseFilter.cs:20</a></div></div>
 <div class="ttc" id="aa00208_html_aa27a23559ceced6497f97d0cdbe8472d"><div class="ttname"><a href="../../dc/d31/a00208.html#aa27a23559ceced6497f97d0cdbe8472d">DummyPhotoshop.Filters.PixelFilter.ProcessImage</a></div><div class="ttdeci">IPhoto ProcessImage(IPhoto photo)</div><div class="ttdoc">Применить к изображению фильтр</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00012">PixelFilter.cs:12</a></div></div>
 <div class="ttc" id="aa00232_html"><div class="ttname"><a href="../../d0/d53/a00232.html">DummyPhotoshop.Windows.AddNoiseWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../db/db6/a00074_source.html#l00008">AddNoiseWindow.cs:9</a></div></div>
-<div class="ttc" id="aa00232_html_a79907fa4d63c48c507093035583a9a78"><div class="ttname"><a href="../../d0/d53/a00232.html#a79907fa4d63c48c507093035583a9a78">DummyPhotoshop.Windows.AddNoiseWindow.AddNoiseWindow</a></div><div class="ttdeci">AddNoiseWindow(MainWindow mainWindow)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/db6/a00074_source.html#l00015">AddNoiseWindow.cs:15</a></div></div>
 <div class="ttc" id="aa00248_html"><div class="ttname"><a href="../../dd/dd7/a00248.html">DummyPhotoshop.Windows.MainWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d44/a00098_source.html#l00007">MainWindow.cs:8</a></div></div>
-<div class="ttc" id="aa00248_html_a23cc05891304f3aaf02d66a99eba0325"><div class="ttname"><a href="../../dd/dd7/a00248.html#a23cc05891304f3aaf02d66a99eba0325">DummyPhotoshop.Windows.MainWindow.Photo</a></div><div class="ttdeci">IPhoto Photo</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d44/a00098_source.html#l00009">MainWindow.cs:9</a></div></div>
-<div class="ttc" id="aa00248_html_acabbd087bf9aa3f20f5db3b99cd7d902"><div class="ttname"><a href="../../dd/dd7/a00248.html#acabbd087bf9aa3f20f5db3b99cd7d902">DummyPhotoshop.Windows.MainWindow.SetPhoto</a></div><div class="ttdeci">void SetPhoto(IPhoto bitmap)</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d44/a00098_source.html#l00029">MainWindow.cs:29</a></div></div>
 <div class="ttc" id="aa00400_html"><div class="ttname"><a href="../../d9/d95/a00400.html">Form</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

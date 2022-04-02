@@ -1,5 +1,6 @@
-<map id="DummyPhotoshop.Data.PhotoCrop" name="DummyPhotoshop.Data.PhotoCrop">
-<area shape="rect" id="node1" title=" " alt="" coords="5,315,231,524"/>
-<area shape="rect" id="node2" href="$d5/db1/a00140.html" title=" " alt="" coords="49,131,187,267"/>
-<area shape="rect" id="node3" href="$d4/d27/a00392.html" title=" " alt="" coords="77,5,159,83"/>
+<map id="DummyPhotoshop.Data.Photo" name="DummyPhotoshop.Data.Photo">
+<area shape="rect" id="node1" title=" " alt="" coords="45,315,243,553"/>
+<area shape="rect" id="node2" href="$d7/dce/a00143.html" title=" " alt="" coords="5,131,144,267"/>
+<area shape="rect" id="node3" href="$db/dbc/a00395.html" title=" " alt="" coords="33,5,116,83"/>
+<area shape="rect" id="node4" href="$d1/d53/a00399.html" title=" " alt="" coords="169,160,258,237"/>
 </map>

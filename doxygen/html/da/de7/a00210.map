@@ -1,7 +1,16 @@
-<map id="DummyPhotoshop.Filters.SharpeningFilter" name="DummyPhotoshop.Filters.SharpeningFilter">
-<area shape="rect" id="node1" title=" " alt="" coords="41,457,279,549"/>
-<area shape="rect" id="node2" href="$dd/da2/a00192.html" title="Базовый класс для фильтра, который применяет определенную маску к каждому пикселю" alt="" coords="101,301,219,408"/>
-<area shape="rect" id="node3" href="$dc/d31/a00208.html" title="Базовый класс для фильтра, который обрабатывает каждый пиксель" alt="" coords="5,132,131,239"/>
-<area shape="rect" id="node4" href="$da/d15/a00188.html" title="Интерфейс фильтра для изображений" alt="" coords="5,5,131,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="155,147,227,224"/>
+<map id="DummyPhotoshop.Filters.PixelFilter" name="DummyPhotoshop.Filters.PixelFilter">
+<area shape="rect" id="node1" title="Базовый класс для фильтра, который обрабатывает каждый пиксель." alt="" coords="771,131,974,252"/>
+<area shape="rect" id="node3" href="$dd/dae/a00163.html" title="Фильтр бинаризации." alt="" coords="5,307,247,429"/>
+<area shape="rect" id="node4" href="$dc/de6/a00167.html" title="Черно&#45;белый фильтр." alt="" coords="271,322,477,414"/>
+<area shape="rect" id="node5" href="$d1/d0d/a00171.html" title="Фильтр изменения яркости." alt="" coords="502,322,737,414"/>
+<area shape="rect" id="node6" href="$db/dd9/a00179.html" title="Фильтр изменения контрастности." alt="" coords="761,315,984,421"/>
+<area shape="rect" id="node7" href="$d3/d2a/a00195.html" title="Базовый класс для фильтра, который применяет определенную маску к каждому пикселю." alt="" coords="1009,300,1214,436"/>
+<area shape="rect" id="node13" href="$de/d79/a00203.html" title="Фильтр&#45;негатив." alt="" coords="1239,322,1461,414"/>
+<area shape="rect" id="node14" href="$de/dd2/a00207.html" title="Фильтр, добавляющий шум к изображению" alt="" coords="1485,315,1692,421"/>
+<area shape="rect" id="node2" href="$d9/dd0/a00191.html" title="Интерфейс фильтра для изображений." alt="" coords="810,5,935,83"/>
+<area shape="rect" id="node8" href="$d6/daa/a00187.html" title="Фильтр шумоподавления, использующий метод Гаусса." alt="" coords="501,491,729,583"/>
+<area shape="rect" id="node9" href="$d8/d72/a00199.html" title="Фильтр шумоподавления, использующий медианную фильтрацию." alt="" coords="753,484,968,591"/>
+<area shape="rect" id="node10" href="$d3/dd5/a00215.html" title="Фильтр изменения резкости изображения." alt="" coords="992,491,1231,583"/>
+<area shape="rect" id="node11" href="$dd/df3/a00219.html" title="Фильтр шумоподавления, использующий равномерный метод." alt="" coords="1255,491,1472,583"/>
+<area shape="rect" id="node12" href="$dc/d28/a00223.html" title="Фильтр, который применяет маску Mask к каждому пикселю изображения." alt="" coords="1497,491,1697,583"/>
 </map>

@@ -12,6 +12,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -69,14 +76,14 @@ $(function() {
   <div class="headertitle"><div class="title">EmbossingFilter.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d4/d8c/a00035.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using</span> <a class="code hl_namespace" href="../../d4/d3e/a00116.html">DummyPhotoshop</a>.<a class="code hl_namespace" href="../../d9/d4b/a00117.html">Data</a>;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using</span> <a class="code hl_namespace" href="../../d4/d3e/a00116.html">DummyPhotoshop</a>.<a class="code hl_namespace" href="../../d9/d4b/a00117.html">Data</a>;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d8/d87/a00118.html">DummyPhotoshop.Filters</a></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../d0/d81/a00180.html">    8</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d0/d81/a00180.html">EmbossingFilter</a> : <a class="code hl_interface" href="../../da/d15/a00188.html">IFilter</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../d6/dfb/a00172.html">CompoundFilter</a> _filter;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../d0/d81/a00180.html#adcbbceb1460b1bb4e10525be1ff26d5b">   11</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="../../d0/d81/a00180.html#adcbbceb1460b1bb4e10525be1ff26d5b">EmbossingFilter</a>()</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">public</span> <a class="code hl_class" href="../../d0/d81/a00180.html">EmbossingFilter</a>()</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>            _filter = <span class="keyword">new</span> <a class="code hl_class" href="../../d6/dfb/a00172.html">CompoundFilter</a>();</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>            var maskFilter = <span class="keyword">new</span> <a class="code hl_class" href="../../d5/d0b/a00220.html">UserMaskFilter</a></div>
@@ -109,7 +116,6 @@ $(function() {
 <div class="ttc" id="aa00172_html_a52c0f2cd5ed9c008477339df39878f56"><div class="ttname"><a href="../../d6/dfb/a00172.html#a52c0f2cd5ed9c008477339df39878f56">DummyPhotoshop.Filters.CompoundFilter.Filters</a></div><div class="ttdeci">LinkedList&lt; IFilter &gt; Filters</div><div class="ttdoc">Список фильтров</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00017">CompoundFilter.cs:17</a></div></div>
 <div class="ttc" id="aa00172_html_af22dda9edeb47e6ed51bbed7fe111572"><div class="ttname"><a href="../../d6/dfb/a00172.html#af22dda9edeb47e6ed51bbed7fe111572">DummyPhotoshop.Filters.CompoundFilter.ProcessImage</a></div><div class="ttdeci">IPhoto ProcessImage(IPhoto photo)</div><div class="ttdoc">Применить к изображению фильтр</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d16/a00029_source.html#l00024">CompoundFilter.cs:24</a></div></div>
 <div class="ttc" id="aa00180_html"><div class="ttname"><a href="../../d0/d81/a00180.html">DummyPhotoshop.Filters.EmbossingFilter</a></div><div class="ttdoc">Фильтр тиснения</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8c/a00035_source.html#l00008">EmbossingFilter.cs:9</a></div></div>
-<div class="ttc" id="aa00180_html_adcbbceb1460b1bb4e10525be1ff26d5b"><div class="ttname"><a href="../../d0/d81/a00180.html#adcbbceb1460b1bb4e10525be1ff26d5b">DummyPhotoshop.Filters.EmbossingFilter.EmbossingFilter</a></div><div class="ttdeci">EmbossingFilter()</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8c/a00035_source.html#l00011">EmbossingFilter.cs:11</a></div></div>
 <div class="ttc" id="aa00180_html_af9821541d8e1c68d8bea8c60f7e9f58b"><div class="ttname"><a href="../../d0/d81/a00180.html#af9821541d8e1c68d8bea8c60f7e9f58b">DummyPhotoshop.Filters.EmbossingFilter.ProcessImage</a></div><div class="ttdeci">IPhoto ProcessImage(IPhoto photo)</div><div class="ttdoc">Применить к изображению фильтр</div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d8c/a00035_source.html#l00030">EmbossingFilter.cs:30</a></div></div>
 <div class="ttc" id="aa00188_html"><div class="ttname"><a href="../../da/d15/a00188.html">DummyPhotoshop.Filters.IFilter</a></div><div class="ttdoc">Интерфейс фильтра для изображений.</div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d32/a00041_source.html#l00008">IFilter.cs:9</a></div></div>
 <div class="ttc" id="aa00220_html"><div class="ttname"><a href="../../d5/d0b/a00220.html">DummyPhotoshop.Filters.UserMaskFilter</a></div><div class="ttdoc">Фильтр, который применяет маску Mask к каждому пикселю изображения.</div><div class="ttdef"><b>Definition:</b> <a href="../../de/de1/a00065_source.html#l00006">UserMaskFilter.cs:7</a></div></div>

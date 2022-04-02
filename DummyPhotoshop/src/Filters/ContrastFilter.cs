@@ -8,8 +8,6 @@ namespace DummyPhotoshop.Filters
     /// </summary>
     /// <remarks>
     /// Каждая компонента цвета пикселя вычисляется по формуле:\n
-    /// <event cref="Exception">This event is raised to let the user know
-    /// something happened.</event>
     /// \f$ x = (x - b) * c + b \f$,\n
     /// где b - средняя яркость изображения,\n
     ///     с - <see cref="Coefficient"/>.
@@ -17,7 +15,7 @@ namespace DummyPhotoshop.Filters
     public class ContrastFilter:PixelFilter
     {
         /// <summary>
-        /// Коэффициент изменения контрастности
+        /// Коэффициент изменения контрастности.
         /// </summary>
         public double Coefficient { get; set; } = 1;
 

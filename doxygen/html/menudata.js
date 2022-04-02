@@ -80,6 +80,4 @@ var menudata={children:[
 {text:"r",url:"functions_prop.html#index_r"},
 {text:"t",url:"functions_prop.html#index_t"},
 {text:"v",url:"functions_prop.html#index_v"},
-{text:"w",url:"functions_prop.html#index_w"}]}]}]},
-{text:"Файлы",url:"files.html",children:[
-{text:"Файлы",url:"files.html"}]}]}
+{text:"w",url:"functions_prop.html#index_w"}]}]}]}]}

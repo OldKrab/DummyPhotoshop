@@ -1,4 +1,5 @@
-<map id="DummyPhotoshop.Filters.EmbossingFilter" name="DummyPhotoshop.Filters.EmbossingFilter">
-<area shape="rect" id="node1" title=" " alt="" coords="5,131,244,237"/>
-<area shape="rect" id="node2" href="$da/d15/a00188.html" title="Интерфейс фильтра для изображений" alt="" coords="62,5,187,83"/>
+<map id="DummyPhotoshop.Filters.ContrastFilter" name="DummyPhotoshop.Filters.ContrastFilter">
+<area shape="rect" id="node1" title="Фильтр изменения контрастности." alt="" coords="5,285,228,392"/>
+<area shape="rect" id="node2" href="$dd/ded/a00211.html" title="Базовый класс для фильтра, который обрабатывает каждый пиксель." alt="" coords="54,131,179,237"/>
+<area shape="rect" id="node3" href="$d9/dd0/a00191.html" title="Интерфейс фильтра для изображений." alt="" coords="54,5,179,83"/>
 </map>

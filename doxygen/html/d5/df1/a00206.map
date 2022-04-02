@@ -1,4 +1,5 @@
-<map id="DummyPhotoshop.Filters.PixelFilter" name="DummyPhotoshop.Filters.PixelFilter">
-<area shape="rect" id="node1" title="Базовый класс для фильтра, который обрабатывает каждый пиксель" alt="" coords="5,131,208,252"/>
-<area shape="rect" id="node2" href="$da/d15/a00188.html" title="Интерфейс фильтра для изображений" alt="" coords="44,5,169,83"/>
+<map id="DummyPhotoshop.Filters.NoiseFilter" name="DummyPhotoshop.Filters.NoiseFilter">
+<area shape="rect" id="node1" title="Фильтр, добавляющий шум к изображению" alt="" coords="5,285,212,392"/>
+<area shape="rect" id="node2" href="$dd/ded/a00211.html" title="Базовый класс для фильтра, который обрабатывает каждый пиксель." alt="" coords="46,131,171,237"/>
+<area shape="rect" id="node3" href="$d9/dd0/a00191.html" title="Интерфейс фильтра для изображений." alt="" coords="46,5,171,83"/>
 </map>

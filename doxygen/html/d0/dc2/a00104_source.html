@@ -12,6 +12,13 @@
 <link href="../../search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -69,7 +76,7 @@ $(function() {
   <div class="headertitle"><div class="title">MaskFilterWindow.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d0/dc2/a00104.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using</span> System;</div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using</span> System;</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using</span> System.Windows.Forms;</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using</span> <a class="code hl_namespace" href="../../d4/d3e/a00116.html">DummyPhotoshop</a>.<a class="code hl_namespace" href="../../d9/d4b/a00117.html">Data</a>;</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using</span> <a class="code hl_namespace" href="../../d4/d3e/a00116.html">DummyPhotoshop</a>.<a class="code hl_namespace" href="../../d8/d87/a00118.html">Filters</a>;</div>
@@ -81,11 +88,11 @@ $(function() {
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keyword">private</span> <a class="code hl_interface" href="../../d5/db1/a00140.html">IPhoto</a> _photo;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keyword">private</span> <a class="code hl_class" href="../../dd/da2/a00192.html">MaskFilter</a> _filter;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="keyword">private</span> MainWindow _mainWindow;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="../../dc/ded/a00252.html#a6f0e8d04b936cb01f8d135e51088924a">   13</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="../../dc/ded/a00252.html#a6f0e8d04b936cb01f8d135e51088924a">MaskFilterWindow</a>(<a class="code hl_class" href="../../dd/dd7/a00248.html">MainWindow</a> mainWindow, <span class="keywordtype">string</span> title)</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keyword">public</span> MaskFilterWindow(MainWindow mainWindow, <span class="keywordtype">string</span> title)</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            InitializeComponent();</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>            this.Text = title;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            _photo = mainWindow.<a class="code hl_property" href="../../dd/dd7/a00248.html#a23cc05891304f3aaf02d66a99eba0325">Photo</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            _photo = mainWindow.Photo;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>            _filter = <span class="keyword">new</span> TFilter();</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            _mainWindow = mainWindow;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            radiusTrackbar.Minimum = 0;</div>
@@ -123,9 +130,6 @@ $(function() {
 <div class="ttc" id="aa00192_html"><div class="ttname"><a href="../../dd/da2/a00192.html">DummyPhotoshop.Filters.MaskFilter</a></div><div class="ttdoc">Базовый класс для фильтра, который применяет определенную маску к каждому пикселю.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00009">MaskFilter.cs:10</a></div></div>
 <div class="ttc" id="aa00192_html_ac1bad8cc6988e4757dd4ea46e4da419a"><div class="ttname"><a href="../../dd/da2/a00192.html#ac1bad8cc6988e4757dd4ea46e4da419a">DummyPhotoshop.Filters.MaskFilter.Radius</a></div><div class="ttdeci">int Radius</div><div class="ttdoc">Радиус применяемой маски.</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/df9/a00044_source.html#l00014">MaskFilter.cs:14</a></div></div>
 <div class="ttc" id="aa00208_html_aa27a23559ceced6497f97d0cdbe8472d"><div class="ttname"><a href="../../dc/d31/a00208.html#aa27a23559ceced6497f97d0cdbe8472d">DummyPhotoshop.Filters.PixelFilter.ProcessImage</a></div><div class="ttdeci">IPhoto ProcessImage(IPhoto photo)</div><div class="ttdoc">Применить к изображению фильтр</div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d2e/a00056_source.html#l00012">PixelFilter.cs:12</a></div></div>
-<div class="ttc" id="aa00248_html"><div class="ttname"><a href="../../dd/dd7/a00248.html">DummyPhotoshop.Windows.MainWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d44/a00098_source.html#l00007">MainWindow.cs:8</a></div></div>
-<div class="ttc" id="aa00248_html_a23cc05891304f3aaf02d66a99eba0325"><div class="ttname"><a href="../../dd/dd7/a00248.html#a23cc05891304f3aaf02d66a99eba0325">DummyPhotoshop.Windows.MainWindow.Photo</a></div><div class="ttdeci">IPhoto Photo</div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d44/a00098_source.html#l00009">MainWindow.cs:9</a></div></div>
-<div class="ttc" id="aa00252_html_a6f0e8d04b936cb01f8d135e51088924a"><div class="ttname"><a href="../../dc/ded/a00252.html#a6f0e8d04b936cb01f8d135e51088924a">DummyPhotoshop.Windows.MaskFilterWindow.MaskFilterWindow</a></div><div class="ttdeci">MaskFilterWindow(MainWindow mainWindow, string title)</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dc2/a00104_source.html#l00013">MaskFilterWindow.cs:13</a></div></div>
 <div class="ttc" id="aa00400_html"><div class="ttname"><a href="../../d9/d95/a00400.html">Form</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

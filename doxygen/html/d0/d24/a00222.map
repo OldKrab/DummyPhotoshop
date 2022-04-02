@@ -1,3 +1,6 @@
-<map id="DummyPhotoshop.Helpers.CropManager" name="DummyPhotoshop.Helpers.CropManager">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,213,171"/>
+<map id="DummyPhotoshop.Filters.UserMaskFilter" name="DummyPhotoshop.Filters.UserMaskFilter">
+<area shape="rect" id="node1" title="Фильтр, который применяет маску Mask к каждому пикселю изображения." alt="" coords="5,455,205,547"/>
+<area shape="rect" id="node2" href="$d3/d2a/a00195.html" title="Базовый класс для фильтра, который применяет определенную маску к каждому пикселю." alt="" coords="46,285,165,407"/>
+<area shape="rect" id="node3" href="$dd/ded/a00211.html" title="Базовый класс для фильтра, который обрабатывает каждый пиксель." alt="" coords="43,131,168,237"/>
+<area shape="rect" id="node4" href="$d9/dd0/a00191.html" title="Интерфейс фильтра для изображений." alt="" coords="43,5,168,83"/>
 </map>

@@ -1,5 +1,5 @@
-<map id="DummyPhotoshop.Filters.NoiseFilter" name="DummyPhotoshop.Filters.NoiseFilter">
-<area shape="rect" id="node1" title=" " alt="" coords="5,285,212,392"/>
-<area shape="rect" id="node2" href="$dc/d31/a00208.html" title="Базовый класс для фильтра, который обрабатывает каждый пиксель" alt="" coords="46,131,171,237"/>
-<area shape="rect" id="node3" href="$da/d15/a00188.html" title="Интерфейс фильтра для изображений" alt="" coords="46,5,171,83"/>
+<map id="DummyPhotoshop.Filters.NegativeFilter" name="DummyPhotoshop.Filters.NegativeFilter">
+<area shape="rect" id="node1" title="Фильтр&#45;негатив." alt="" coords="5,285,228,377"/>
+<area shape="rect" id="node2" href="$dd/ded/a00211.html" title="Базовый класс для фильтра, который обрабатывает каждый пиксель." alt="" coords="54,131,179,237"/>
+<area shape="rect" id="node3" href="$d9/dd0/a00191.html" title="Интерфейс фильтра для изображений." alt="" coords="54,5,179,83"/>
 </map>

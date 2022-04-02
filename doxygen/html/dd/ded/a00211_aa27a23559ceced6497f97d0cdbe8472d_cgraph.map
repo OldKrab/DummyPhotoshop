@@ -1,0 +1,5 @@
+<map id="DummyPhotoshop.Filters.PixelFilter.ProcessImage" name="DummyPhotoshop.Filters.PixelFilter.ProcessImage">
+<area shape="rect" id="node1" title="Применить к изображению фильтр" alt="" coords="5,39,208,80"/>
+<area shape="rect" id="node2" href="$dd/ded/a00211.html#a7f99e8ec0e33d1e02737bb718686846b" title="Предварительные действия перед обработкой." alt="" coords="256,5,459,47"/>
+<area shape="rect" id="node3" href="$dd/ded/a00211.html#ab7c6deb3982a2009bcb5ebd23c128b47" title="Функция для обработки одного пикселя." alt="" coords="256,71,459,112"/>
+</map>

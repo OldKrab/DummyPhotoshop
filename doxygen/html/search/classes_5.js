@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gaussiandenoisefilter_0',['GaussianDenoiseFilter',['../d2/d94/a00184.html',1,'DummyPhotoshop::Filters']]],
-  ['gaussiandenoisewindow_1',['GaussianDenoiseWindow',['../d6/d08/a00244.html',1,'DummyPhotoshop::Windows']]]
+  ['gaussiandenoisefilter_0',['GaussianDenoiseFilter',['../d6/daa/a00187.html',1,'DummyPhotoshop::Filters']]],
+  ['gaussiandenoisewindow_1',['GaussianDenoiseWindow',['../d0/d1f/a00247.html',1,'DummyPhotoshop::Windows']]]
 ];
